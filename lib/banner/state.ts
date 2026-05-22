@@ -1,8 +1,18 @@
-import type { Schedule, Session } from '@/lib/data/schema';
+export interface MinimalSession {
+  id: number;
+  slug: string;
+  title: string;
+  startsAt: string | null;
+  endsAt: string | null;
+}
+
+export interface BannerInput {
+  sessions: readonly MinimalSession[];
+}
 
 export type BannerState =
-  | { kind: 'live'; session: Session; minutesRemaining: number }
-  | { kind: 'upcoming'; session: Session; minutesUntil: number }
+  | { kind: 'live'; session: MinimalSession; minutesRemaining: number }
+  | { kind: 'upcoming'; session: MinimalSession; minutesUntil: number }
   | { kind: 'hidden' };
 
 const SIX_HOURS_MS = 6 * 60 * 60 * 1000;
@@ -23,13 +33,13 @@ const SIX_HOURS_MS = 6 * 60 * 60 * 1000;
  * Minute calculations use `Math.ceil(deltaMs / 60_000)` so a half-minute reads
  * as "1 minute remaining" rather than rounding down to 0.
  */
-export function computeBannerState(now: Date, schedule: Schedule): BannerState {
+export function computeBannerState(now: Date, input: BannerInput): BannerState {
   const nowMs = now.getTime();
 
-  let liveBest: { session: Session; endMs: number } | undefined;
-  let upcomingBest: { session: Session; startMs: number } | undefined;
+  let liveBest: { session: MinimalSession; endMs: number } | undefined;
+  let upcomingBest: { session: MinimalSession; startMs: number } | undefined;
 
-  for (const s of schedule.sessions) {
+  for (const s of input.sessions) {
     if (s.startsAt === null || s.endsAt === null) continue;
     const startMs = Date.parse(s.startsAt);
     const endMs = Date.parse(s.endsAt);

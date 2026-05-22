@@ -1,5 +1,8 @@
-import type { ReactNode } from 'react';
+import { Suspense, type ReactNode } from 'react';
 import { BottomNav } from '@/components/client/BottomNav';
+import { HappeningNowBanner } from '@/components/client/HappeningNowBanner';
+import { getSchedule } from '@/lib/data';
+import { toMinimalSessions } from '@/lib/banner/serialize';
 import './globals.css';
 
 export const metadata = {
@@ -15,9 +18,14 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const minimalSessions = toMinimalSessions(getSchedule());
+
   return (
     <html lang="en" data-theme="dark">
       <body>
+        <Suspense fallback={null}>
+          <HappeningNowBanner sessions={minimalSessions} />
+        </Suspense>
         <main>{children}</main>
         <BottomNav />
       </body>
