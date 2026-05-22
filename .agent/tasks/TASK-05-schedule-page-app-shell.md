@@ -1,6 +1,6 @@
 # TASK-05: Schedule Page + App Shell (M4)
 
-**Status**: ⏸️ Blocked on TASK-02, TASK-03
+**Status**: ✅ Complete (2026-05-22)
 **Created**: 2026-05-22
 **Assignee**: Main thread
 **Effort**: ~half day
@@ -177,8 +177,17 @@ Manual checks: open `/` on phone or DevTools mobile profile; confirm all 10 date
 
 ## Notes
 
-_(execution-time observations go here)_
+**Executed 2026-05-22** by main thread.
+
+- **Data-driven cuts (Option C — conditional rendering)**: real GitNation snapshot lacks track / room / capacity / prereqs / resources fields. SessionCard ships without TrackChip and without row 4 (TrackChip + room + capacity). Left stripe uses **kind-based color** instead of `track.color` (workshop=brand, talk=border-2). These cuts apply to TASK-06 too. Brief warned about it ("content browser, not wayfinder"); design handoff drifted; reality reconciled in-component.
+- **Banner mount placeholder**: TASK-05 spec asked for a `<HappeningNowBanner>` placeholder in `app/layout.tsx`. Implemented as bare `--banner-pad: 50px` default on `<main>` — when TASK-07 ships, the banner client island flips this CSS var imperatively. No placeholder element needed; the CSS variable IS the placeholder.
+- **Avatar element**: plain `<img>` per spec (Cloudinary URLs pre-optimized). Suppressed `@next/next/no-img-element` lint with an inline disable + reason comment.
+- **DaySwitcher**: server-rendered anchor jumps (`<a href="#day-N">`). No client state. Smooth scroll via CSS `scroll-behavior: smooth` on `html`. Day-1 is the default active label (no `?day=` param logic yet).
+- **`lib/format/datetime.ts` introduced**: 5 formatters (time, time-range, day-name, day-key-display, snapshot). All use `Intl.DateTimeFormat(undefined, ...)` so timezone is user-local, not hardcoded Amsterdam.
+- **Bundle**: `/` route = 161 B page + 106 kB First Load. BottomNav is the only client island shipped from this task. Build time ~2.1s. Static generation: 4/4 routes.
+- **Test count unchanged at 78** — no logic added in TASK-05.
+- **Manual deferrals**: `pnpm dev` visual smoke + Lighthouse mobile ≥95 are not run automatically (TASK-08 cancelled). Recommend running them before TASK-09 deploy.
 
 ---
 
-**Last Updated**: 2026-05-22 (design handoff: 4-tab nav, KindChip, track stripe, DaySwitcher, app-root banner mount, token CSS-var system)
+**Last Updated**: 2026-05-22 (delivered — shell + Schedule + 8 server components + BottomNav client; data-driven cuts applied)

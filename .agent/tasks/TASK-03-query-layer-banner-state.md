@@ -190,4 +190,4 @@ pnpm test --coverage
 
 ---
 
-**Last Updated**: 2026-05-22 (design handoff: banner reduced to 2 states + hidden)
+**Last Updated**: 2026-05-22 (delivered — 5 modules, 34 new tests, 100% line coverage)

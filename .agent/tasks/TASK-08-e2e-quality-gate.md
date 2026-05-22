@@ -1,6 +1,6 @@
 # TASK-08: E2E + Quality Gate (M7)
 
-**Status**: ⏸️ Blocked on TASK-06, TASK-07
+**Status**: 🚫 Cancelled (2026-05-22, scope-reduced) — see GH #9
 **Created**: 2026-05-22
 **Assignee**: Main thread
 **Effort**: ~1h

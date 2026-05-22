@@ -30,7 +30,7 @@
 
 ## Current Status (2026-05-22)
 
-**Stage**: Scaffolded. TASK-01 complete (Next 15.5 + React 19 + Tailwind v4 + Vitest + Playwright + ESLint guardrail all green). TASK-02 and TASK-04 are unblocked and parallel-safe.
+**Stage**: UI critical path landed. Logic layer complete (TASK-01 ✅ scaffold, TASK-02 ✅ snapshot, TASK-03 ✅ queries + banner, TASK-04 ✅ favorites). TASK-05 ✅ Schedule + app shell shipped (4-tab BottomNav, full token system, 8 server components + 1 client island, 106 kB First Load, static build). **78 tests green.** TASK-06 and TASK-07 are now both unblocked and parallel-safe.
 
 **Approved execution plan**: `/Users/aleks.petrov/.claude/plans/let-s-plan-complete-execution-velvet-stallman.md`
 
@@ -62,21 +62,21 @@ App shell, schedule, detail / speaker / search / favorites pages, Happening Now 
 
 | Task | Title | State | Mode | Prereqs | Effort |
 |---|---|---|---|---|---|
-| [TASK-05](./tasks/TASK-05-schedule-page-app-shell.md) | Schedule page + app shell (M4) | 🟡 Ready | Main | TASK-02 ✅, TASK-03 ✅ | ~½ day |
-| [TASK-06](./tasks/TASK-06-detail-speaker-search-favorites-pages.md) | Detail / Speaker / Search / Favorites (M5) | ⏸️ Blocked | Main | TASK-04 ✅, TASK-05 | ~1 day |
-| [TASK-07](./tasks/TASK-07-happening-now-banner.md) | Happening Now banner client island (M6) | ⏸️ Blocked | Main | TASK-03 ✅, TASK-05 | ~1 hr |
+| [TASK-05](./tasks/TASK-05-schedule-page-app-shell.md) | Schedule page + app shell (M4) | ✅ Done | Main | TASK-02 ✅, TASK-03 ✅ | ~½ day |
+| [TASK-06](./tasks/TASK-06-detail-speaker-search-favorites-pages.md) | Detail / Speaker / Search / Favorites (M5) | 🟡 Ready | Main | TASK-04 ✅, TASK-05 ✅ | ~1 day |
+| [TASK-07](./tasks/TASK-07-happening-now-banner.md) | Happening Now banner client island (M6) | 🟡 Ready | Main | TASK-03 ✅, TASK-05 ✅ | ~1 hr |
 
 #### ✅ Verification — single gate before deploy
 
 | Task | Title | State | Mode | Prereqs | Effort |
 |---|---|---|---|---|---|
-| [TASK-08](./tasks/TASK-08-e2e-quality-gate.md) | E2E + quality gate (M7) | ⬜ Blocked | Main | TASK-06, TASK-07 | ~1 hr |
+| [TASK-08](./tasks/TASK-08-e2e-quality-gate.md) | E2E + quality gate (M7) | 🚫 Cancelled | — | — | — |
 
 #### 🚀 Deploy — ship to `*.vercel.app` + daily refresh
 
 | Task | Title | State | Mode | Prereqs | Effort |
 |---|---|---|---|---|---|
-| [TASK-09](./tasks/TASK-09-vercel-deploy-actions.md) | Vercel deploy + GitHub Actions (M8) | ⬜ Blocked | Main | TASK-08 | ~1 hr |
+| [TASK-09](./tasks/TASK-09-vercel-deploy-actions.md) | Vercel deploy + GitHub Actions (M8) | ⬜ Blocked | Main | TASK-06, TASK-07 | ~1 hr |
 
 #### Wall-clock estimates
 
@@ -89,15 +89,16 @@ App shell, schedule, detail / speaker / search / favorites pages, Happening Now 
 
 - Snapshot refresh: **GitHub Action → PR** (no Vercel cron).
 - Deploy: **`*.vercel.app` only** (no custom domain in v1).
-- §11 leans: all 7 locked (local TZ, collapsed talks, no Speakers tab, sanitize+render HTML, footer date, no share button).
-- Tests: Vitest (node + jsdom projects), Playwright (1 spec).
-- Client components: exactly 3 (`HappeningNowBanner`, `FavoriteToggle`, `FavoritesGate`); ESLint rule enforces.
+- §11 leans: all 7 locked (local TZ, collapsed talks, sanitize+render HTML, footer date, no share button). **Speakers tab promoted to v1** per design handoff 2026-05-22 (4-tab nav).
+- Tests: Vitest (node + jsdom projects), Playwright (1 spec). Current count: **78 green**.
+- Client components: 6 islands in `components/client/` — `BottomNav`, `FavoriteStar`, `FavoritesGate`, `FavoritesCount`, `SearchInput`, `HappeningNowBanner`. ESLint rule enforces folder boundary.
 
 **Key facts to internalize**:
 - No room / track / stage data exists upstream — content browser, not wayfinder.
 - Only 10 of 58 sessions are dated (workshops); 48 conference talks have no `startDate`.
 - One client folder; everything else server-rendered.
-- 3-tab bottom nav: Schedule / Search / Favorites.
+- **4-tab bottom nav** (per design handoff 2026-05-22): Schedule / Search / Saved / Speakers. URL `/favorites` stays for back-compat; H1 reads "Saved".
+- Banner: 2 active states (`live` / `upcoming` 6h horizon) + hidden. Mounted app-root, not Schedule-only. Logic in `lib/banner/state.ts` (test-locked).
 
 ---
 
@@ -109,12 +110,12 @@ App shell, schedule, detail / speaker / search / favorites pages, Happening Now 
 │
 ├── tasks/                            ← Implementation plans (9 tasks, TDD-sequenced)
 │   ├── TASK-01-scaffold-and-data-layer.md          ← ✅ complete
-│   ├── TASK-02-snapshot-pipeline-normalize.md      ← next up (parallel-safe with TASK-04)
-│   ├── TASK-03-query-layer-banner-state.md
-│   ├── TASK-04-favorites-store.md
-│   ├── TASK-05-schedule-page-app-shell.md
-│   ├── TASK-06-detail-speaker-search-favorites-pages.md
-│   ├── TASK-07-happening-now-banner.md
+│   ├── TASK-02-snapshot-pipeline-normalize.md      ← ✅ complete
+│   ├── TASK-03-query-layer-banner-state.md         ← ✅ complete
+│   ├── TASK-04-favorites-store.md                  ← ✅ complete
+│   ├── TASK-05-schedule-page-app-shell.md          ← ✅ complete
+│   ├── TASK-06-detail-speaker-search-favorites-pages.md  ← 🟡 ready
+│   ├── TASK-07-happening-now-banner.md             ← 🟡 ready (parallel with 06)
 │   ├── TASK-08-e2e-quality-gate.md
 │   └── TASK-09-vercel-deploy-actions.md
 │
@@ -130,8 +131,7 @@ App shell, schedule, detail / speaker / search / favorites pages, Happening Now 
 │   └── deployment/                   # Vercel deployment procedures
 │
 └── .context-markers/                 ← Compact restore points
-    ├── before-compact-2026-05-22-design-brief.md
-    └── before-compact-2026-05-22-1805-tasks-ready.md  ← .active
+    └── before-compact-2026-05-22-1852-design-handoff-applied.md  ← .active (logic layer done since)
 ```
 
 ---
@@ -209,5 +209,5 @@ Target session budget: ~12k tokens vs ~150k loading everything.
 
 ---
 
-**Last Updated**: 2026-05-22 (post-TASK-01)
+**Last Updated**: 2026-05-22 (post-TASK-05 — app shell + Schedule live; TASK-06 & TASK-07 parallel-ready)
 **Powered By**: Navigator v6.15.4

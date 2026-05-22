@@ -1,10 +1,10 @@
 # TASK-09: Vercel Deploy + GitHub Actions (M8)
 
-**Status**: ⏸️ Blocked on TASK-08
+**Status**: ⏸️ Blocked on TASK-06, TASK-07 (TASK-08 cancelled)
 **Created**: 2026-05-22
 **Assignee**: Main thread
 **Effort**: ~1h
-**Prereqs**: [TASK-08](./TASK-08-e2e-quality-gate.md)
+**Prereqs**: [TASK-06](./TASK-06-detail-speaker-search-favorites-pages.md), [TASK-07](./TASK-07-happening-now-banner.md)
 **Blocks**: nothing
 
 ---
