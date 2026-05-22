@@ -24,6 +24,7 @@ export default defineConfig({
       },
       {
         resolve: { alias },
+        esbuild: { jsx: 'automatic' },
         test: {
           name: 'jsdom',
           environment: 'jsdom',
