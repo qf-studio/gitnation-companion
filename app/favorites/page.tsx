@@ -8,6 +8,7 @@ import { EmptyState } from '@/components/server/EmptyState';
 import { FavoritesGate } from '@/components/client/FavoritesGate';
 import { FavoritesCount } from '@/components/client/FavoritesCount';
 import { FavoritesEmpty } from '@/components/client/FavoritesEmpty';
+import { AnyFavoriteGate } from '@/components/client/AnyFavoriteGate';
 import { PreMountOnly } from '@/components/client/PreMountOnly';
 import type { Session, Speaker } from '@/lib/data/schema';
 
@@ -36,7 +37,7 @@ export default function SavedPage() {
 
   return (
     <>
-      <ScreenHeader title="Saved" subtitle={<FavoritesCount /> as unknown as string} />
+      <ScreenHeader title="Saved" subtitle={<FavoritesCount />} />
 
       <PreMountOnly>
         <FavoritesSkeleton />
@@ -44,28 +45,28 @@ export default function SavedPage() {
 
       {days.map((day, i) => (
         <section key={day.dayKey} id={`day-${i + 1}`} style={{ paddingTop: 12 }}>
-          {groupBySlot(day.sessions).map((slot) => (
-            <div key={slot.startsAt} style={{ marginBottom: 12 }}>
-              <FavoritesGate
-                sessionId={-1 /* sentinel: any of this slot's sessions favorited? handled per-card below */}
-              >
-                <></>
-              </FavoritesGate>
-              <TimeMarker startsAt={slot.startsAt} />
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                {slot.sessions.map((session) => {
-                  const sps = session.speakerIds
-                    .map((id) => speakersById.get(id))
-                    .filter((s): s is Speaker => s !== undefined);
-                  return (
-                    <FavoritesGate key={session.id} sessionId={session.id}>
-                      <SessionCard session={session} speakers={sps} />
-                    </FavoritesGate>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
+          {groupBySlot(day.sessions).map((slot) => {
+            const slotIds = slot.sessions.map((s) => s.id);
+            return (
+              <AnyFavoriteGate key={slot.startsAt} sessionIds={slotIds}>
+                <div style={{ marginBottom: 12 }}>
+                  <TimeMarker startsAt={slot.startsAt} />
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                    {slot.sessions.map((session) => {
+                      const sps = session.speakerIds
+                        .map((id) => speakersById.get(id))
+                        .filter((s): s is Speaker => s !== undefined);
+                      return (
+                        <FavoritesGate key={session.id} sessionId={session.id}>
+                          <SessionCard session={session} speakers={sps} />
+                        </FavoritesGate>
+                      );
+                    })}
+                  </div>
+                </div>
+              </AnyFavoriteGate>
+            );
+          })}
         </section>
       ))}
 

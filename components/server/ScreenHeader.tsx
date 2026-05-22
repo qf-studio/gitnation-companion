@@ -1,7 +1,9 @@
+import type { ReactNode } from 'react';
+
 interface ScreenHeaderProps {
   kicker?: string;
   title: string;
-  subtitle?: string;
+  subtitle?: ReactNode;
 }
 
 export function ScreenHeader({ kicker, title, subtitle }: ScreenHeaderProps) {
