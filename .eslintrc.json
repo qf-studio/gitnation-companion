@@ -1,0 +1,18 @@
+{
+  "extends": "next/core-web-vitals",
+  "overrides": [
+    {
+      "files": ["**/*.{ts,tsx}"],
+      "excludedFiles": ["components/client/**/*"],
+      "rules": {
+        "no-restricted-syntax": [
+          "error",
+          {
+            "selector": "ExpressionStatement[directive='use client']",
+            "message": "'use client' is only allowed in components/client/**"
+          }
+        ]
+      }
+    }
+  ]
+}

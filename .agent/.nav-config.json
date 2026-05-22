@@ -1,0 +1,19 @@
+{
+  "version": "6.15.4",
+  "project_name": "gitnation-companion",
+  "tech_stack": "Next.js (App Router), TypeScript, Vercel",
+  "project_management": "none",
+  "task_prefix": "TASK",
+  "team_chat": "none",
+  "auto_load_navigator": true,
+  "compact_strategy": "conservative",
+  "auto_update": {
+    "enabled": true,
+    "check_interval_hours": 1,
+    "last_check": "2026-05-22T18:07:46.312968"
+  },
+  "read_guard_hook": {
+    "strict_block": false,
+    "escalate_threshold": 50
+  }
+}
