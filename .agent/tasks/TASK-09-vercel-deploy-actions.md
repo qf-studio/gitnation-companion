@@ -212,8 +212,35 @@ gh workflow run refresh-snapshot.yml
 
 ## Notes
 
-_(execution-time observations + production URL go here)_
+**Deployed 2026-05-22**: `https://gitnation-companion.vercel.app` (alias of
+`gitnation-companion-eqw9ak8xl-aleksei-petrovs-projects.vercel.app`).
+Project linked under scope `team_gkl2ML19PbNAZOfR42s5OQJT`, project id
+`prj_jnZeT7bK2ntvGL7gfsHrC8q9P7Bc`.
+
+Build stats from `vercel deploy`: Next.js 15.5.18, 124 static pages
+prerendered, 33s build time, READY in 60s. Shared First Load JS = 103 kB.
+
+Smoke check (curl HEAD) returns 200 on `/`, `/favorites`, `/speakers`, and
+a sampled `/sessions/<slug>` route. `/favorites` reports
+`x-vercel-cache: PRERENDER` confirming static edge serving.
+
+`vercel deploy --yes` deployed straight to production target — newer CLI
+versions treat the linked production branch as the default target. To
+ship a preview without promoting, use `vercel deploy --target=preview`.
+
+CI workflow (`.github/workflows/ci.yml`) only runs on pull requests, so
+the direct push of TASK-09 commits to `main` did not exercise it. First
+PR opened against `main` will be the first green-CI signal.
+
+Refresh-snapshot workflow not yet executed. It will tick at 06:00 UTC
+daily; can also be hand-triggered via `gh workflow run refresh-snapshot.yml`.
+
+Skipped (out of scope this iteration):
+- Disabling auto-promotion in Vercel project settings (current deploy
+  went to prod automatically — acceptable for v1, can be tightened later)
+- Phone smoke test against prod URL (manual, user-driven)
+- Playwright spec against prod URL (TASK-08 cancelled)
 
 ---
 
-**Last Updated**: 2026-05-22
+**Last Updated**: 2026-05-22 (deploy landed at https://gitnation-companion.vercel.app)
