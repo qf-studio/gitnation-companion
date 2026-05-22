@@ -1,0 +1,185 @@
+{
+  "event": {
+    "id": 142,
+    "slug": "jsnation-2026",
+    "name": "JSNation 2026",
+    "description": "<p>Discover the future of the JavaScript development ecosystem.</p>",
+    "startDate": "2026-06-11T11:00:00.000Z",
+    "endDate": "2026-06-15T19:00:00.000Z",
+    "location": "Amsterdam & Online",
+    "hashtag": "jsnation",
+    "discordUrl": "https://discord.gg/TGh5XkeJmn",
+    "domain": "https://jsnation.com",
+    "tagline": "The main JavaScript conference of the year",
+    "logo": "https://cdn.example.com/jsn-logo.png",
+    "noExactDate": false,
+    "isRegistrationOpen": true,
+    "ticketsURL": "https://ti.to/gitnation/jsnation-2026"
+  },
+  "sessions": [
+    {
+      "id": 3635,
+      "slug": "agentic-interfaces-talk",
+      "title": "Agentic Interfaces: Tools, Skills, Generative UI and Web MCP",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>What if your UI was a tool the agent could call?</p>",
+      "tags": [
+        { "label": "artificial intelligence", "slug": "artificial-intelligence", "id": 51 }
+      ],
+      "speakerIds": [18374]
+    },
+    {
+      "id": 3339,
+      "slug": "react-query-beyond-the-basics-3339",
+      "title": "React Query - Beyond the Basics",
+      "kind": "workshop",
+      "format": "InPerson",
+      "startsAt": "2026-06-10T12:00:00.000Z",
+      "endsAt": "2026-06-10T16:00:00.000Z",
+      "durationHours": 1,
+      "abstractHtml": "<p>React Query in production.</p>",
+      "tags": [
+        { "label": "react query", "slug": "react-query", "id": 1 }
+      ],
+      "speakerIds": [7701]
+    },
+    {
+      "id": 3693,
+      "slug": "no-servers-no-cloud-no-masters-make-p2p-apps",
+      "title": "Pear: Releasing Production P2P Apps",
+      "kind": "workshop",
+      "format": "Remote",
+      "startsAt": "2026-06-03T14:00:00.000Z",
+      "endsAt": "2026-06-03T17:00:00.000Z",
+      "durationHours": 1,
+      "abstractHtml": "<p>Build a realtime peer-to-peer application.</p>",
+      "tags": [],
+      "speakerIds": [107776, 158469]
+    },
+    {
+      "id": 3700,
+      "slug": "the-state-of-ai-for-web-development",
+      "title": "The State of AI for Web Development",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "",
+      "tags": [
+        { "label": "artificial intelligence", "slug": "artificial-intelligence", "id": 51 }
+      ],
+      "speakerIds": [136488]
+    },
+    {
+      "id": 9999,
+      "slug": "defensive-empty-users-no-text",
+      "title": "Hypothetical Defensive Talk",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "",
+      "tags": [],
+      "speakerIds": []
+    }
+  ],
+  "speakers": [
+    {
+      "id": 18374,
+      "nickname": "wes_bos",
+      "name": "Wes Bos",
+      "avatar": "https://cdn.example.com/wes.jpg",
+      "company": "Syntax.fm",
+      "location": "Canada",
+      "bio": "Full-stack developer.",
+      "github": null,
+      "twitter": "wesbos",
+      "bluesky": "wesbos.com",
+      "twitterFollowers": 434022,
+      "companyLogo": null,
+      "sessionIds": [3635]
+    },
+    {
+      "id": 7701,
+      "nickname": "dominik_dorfmeister",
+      "name": "Dominik Dorfmeister",
+      "avatar": "https://avatars.example.com/dominik.png",
+      "company": "Sentry",
+      "location": "Austria",
+      "bio": "React-Query maintainer.",
+      "github": "TkDodo",
+      "twitter": "TkDodo",
+      "bluesky": null,
+      "twitterFollowers": 56628,
+      "companyLogo": null,
+      "sessionIds": [3339]
+    },
+    {
+      "id": 107776,
+      "nickname": "david_mark_clements",
+      "name": "David Mark Clements",
+      "avatar": "https://cdn.example.com/david.png",
+      "company": "Tether",
+      "location": null,
+      "bio": "Writing JavaScript since '96.",
+      "github": "davidmarkclements",
+      "twitter": "davidmarkclem",
+      "bluesky": null,
+      "twitterFollowers": 2680,
+      "companyLogo": null,
+      "sessionIds": [3693]
+    },
+    {
+      "id": 136488,
+      "nickname": "sacha_greif",
+      "name": "Sacha Greif",
+      "avatar": "https://cdn.example.com/sacha.png",
+      "company": "Devographics",
+      "location": "Japan",
+      "bio": "Creator of State of JS.",
+      "github": "sachag",
+      "twitter": "sachagreif",
+      "bluesky": "sachagreif.com",
+      "twitterFollowers": 23616,
+      "companyLogo": "https://cdn.example.com/devographics-logo.png",
+      "sessionIds": [3700]
+    },
+    {
+      "id": 158211,
+      "nickname": "oron_morad",
+      "name": "Oron Morad",
+      "avatar": "https://cdn.example.com/oron.jpg",
+      "company": "monday.com",
+      "location": "Israel",
+      "bio": "Distinguished Software Engineer at monday.com.",
+      "github": null,
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": []
+    },
+    {
+      "id": 158469,
+      "nickname": "mikkel_malmberg",
+      "name": "Mikkel Malmberg",
+      "avatar": "https://cdn.example.com/mikkel.jpg",
+      "company": "Tether",
+      "location": null,
+      "bio": "Programmer and app builder, excited about p2p.",
+      "github": "mikker",
+      "twitter": "mikker",
+      "bluesky": null,
+      "twitterFollowers": 16112,
+      "companyLogo": null,
+      "sessionIds": [3693]
+    }
+  ],
+  "fetchedAt": "2026-05-22T00:00:00.000Z"
+}

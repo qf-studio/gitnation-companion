@@ -1,6 +1,2291 @@
 {
-  "event": null,
-  "sessions": [],
-  "speakers": [],
-  "fetchedAt": "1970-01-01T00:00:00Z"
+  "event": {
+    "id": 142,
+    "slug": "jsnation-2026",
+    "name": "JSNation 2026",
+    "description": "<p>Discover the future of the JavaScript development ecosystem and get connected to its stellar crowd! JSNation is the best place to learn about JavaScript – beside the main JS conf talks and panel discussion with high-profile specialists, be prepared for awesome MCs, in-depth workshops, a number of discussions &amp; networking rooms, interactive entertainment, and engaging challenges for all participants.</p>",
+    "startDate": "2026-06-11T11:00:00.000Z",
+    "endDate": "2026-06-15T19:00:00.000Z",
+    "location": "Amsterdam & Online",
+    "hashtag": "jsnation",
+    "discordUrl": "https://discord.gg/TGh5XkeJmn",
+    "domain": "https://jsnation.com",
+    "tagline": "The main JavaScript conference of the year",
+    "logo": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1761054106/JSN_Logo_Color_1_mtj2xv.png",
+    "noExactDate": false,
+    "isRegistrationOpen": true,
+    "ticketsURL": "https://ti.to/gitnation/jsnation-2026"
+  },
+  "sessions": [
+    {
+      "id": 3635,
+      "slug": "webmcp-generated-ui-components-and-exposing-server-capabilities-to-agents",
+      "title": "Agentic Interfaces: Tools, Skills, Generative UI and Web MCP",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Who is ordering Starbucks with ChatGPT? Will an Agent just make the perfect UI for you? Do we even need websites anymore? This app could have been an API!</p><p>We like using AI, but we also like using websites! Do we add AI to our site, or does our site get added to AI? This talk looks at the current landscape of agentic interfaces and the future of UI, websites and browsers.</p>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        18374
+      ]
+    },
+    {
+      "id": 3604,
+      "slug": "stress-test-your-reflexes-and-my-app",
+      "title": "Stress Test Your Reflexes (And My App)",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>What happens when you turn your audience into a live, distributed load test?</p><p>We will kick off this session with a high-stakes, multiplayer \"Whack-a-Mole\" challenge played right from your phone. As you compete for the leaderboard, a live stream of concurrent data will be generated to showcase realtime web capabilities in action across devices.</p><p>After playing around, it is time to get serious by digging into the challenges, architecture and technologies used when building such a platform. Discover how helpful or distracting AI can be during this process.</p><p>Key takeaways include:</p><ul><li>AI: The Good &amp; The Glitchy!</li><li>The Stack: NextJS, Supabase.</li><li>Realtime: No longer refreshing the page.</li></ul><p>Leave the theory behind and see how modern tools and a bit of trial and error handle the chaos of live user interaction.</p>",
+      "tags": [
+        {
+          "label": "fun demos",
+          "slug": "fun-demos",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        33209
+      ]
+    },
+    {
+      "id": 3339,
+      "slug": "react-query-beyond-the-basic-3339",
+      "title": "React Query - Beyond the Basics",
+      "kind": "workshop",
+      "format": "InPerson",
+      "startsAt": "2026-06-10T12:00:00.000Z",
+      "endsAt": "2026-06-10T16:00:00.000Z",
+      "durationHours": 1,
+      "abstractHtml": "<p>In this workshop, we'll go beyond the fundamentals and explore some of the more powerful features React Query has to offer. You'll gain a deeper understanding of how it works under the hood and learn how to write scalable, maintainable React Query code.</p><p>Together, we'll build a simple example app and incrementally enhance it with one core objective in mind: delivering the best possible user experience. That means snappy interactions, minimal layout shifts, and avoiding unnecessary loading spinners wherever we can.</p><p>To achieve this, we'll dive into advanced techniques like various forms of prefetching (including integration with route loaders), seeding the query cache, crafting smooth paginated experiences, and even persisting query state through full page reloads using persistence plugins.</p><p>Note: You should have prior knowledge about React Query if you attend this workshop.</p>",
+      "tags": [
+        {
+          "label": "react query",
+          "slug": "react-query",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        7701
+      ]
+    },
+    {
+      "id": 3290,
+      "slug": "dead-code-shouldnt-exist-how-we-removed-28k-lines-of-code-one-knip-at-a-time",
+      "title": "Dead Code Shouldn’t Exist: How We Removed 28k Lines of Code, One Knip at a Time",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Ever wonder how much of your codebase is just… hanging around, doing nothing? At Sentry, we did too - and the answer was more than we expected. In this talk, I’ll share how we used Knip, a powerful tool for detecting unused files, exports, and dependencies, to declutter our frontend codebase. You’ll learn about the practical steps we took to safely identify and remove dead code, how we integrated Knip into our workflows, about unexpected edge-cases and what we learned along the way. Whether you're maintaining a massive monolith or just looking to tidy up, this session will give you practical strategies - and maybe a little inspiration - to start decluttering your own codebase, one Knip at a time.</p>",
+      "tags": [
+        {
+          "label": "code quality",
+          "slug": "code-quality",
+          "id": 64
+        }
+      ],
+      "speakerIds": [
+        7701
+      ]
+    },
+    {
+      "id": 3449,
+      "slug": "agents-on-the-canvas-with-tldraw",
+      "title": "Agents on the Canvas With tldraw",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>At tldraw, we've been exploring the infinite canvas as a surface for real-time collaboration between multiple agents and multiple users. Learn about what works, what doesn't, and whether the future AI might live on the canvas.</p><p>Our work with AI on the canvas began with makereal.tldraw.com, often cited as the first \"vibe coding\" tool to reach escape velocity in November 2023. We later did work with realtime drawing (drawfast.tldraw.com), autocomplete, and a canvas interface for AI with (teach.tldraw.com). In 2024, we shipped an AI workflows app (tldraw.computer) and then returned to our canvas AI learnings with a public starter kit for working on the canvas with cursor-style AI agents (https://tldraw.dev/starter-kits/agent) and then later our spatialized agents-on-the-canvas experiment (fairies.tldraw.com).</p>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        12996
+      ]
+    },
+    {
+      "id": 3632,
+      "slug": "fullstack-monitoring-with-open-telemetry-end-to-end-observability-for-modern-applications",
+      "title": "FullStack Monitoring with Open Telemetry: End-to-End Observability for Modern Applications",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>In this talk, I’ll show how to instrument applications end-to-end with OpenTelemetry, capturing metrics, traces, and logs across the entire request lifecycle. You’ll learn to pinpoint errors, understand why they happen, and fix them faster – guided by real-world examples and a starter template for quick adoption.</p><p>You’ll also see how to turn telemetry into automated insights using MCPs (Model Context Protocol) to generate reports from your observability stack. Using a Grafana MCP to produce incident summaries, release health reports, and diagnostics with open-source tooling.</p>",
+      "tags": [
+        {
+          "label": "observability",
+          "slug": "observability",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        9873
+      ]
+    },
+    {
+      "id": 3440,
+      "slug": "templates-and-components-for-claude-code-the-future-of-ai-coding-workflows",
+      "title": "Templates and Components for Claude Code: The Future of AI Coding Workflows",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Claude Code is no longer just a coding assistant, it's becoming an operating system for software development. In this talk, I'll walk through how reusable templates, agents, hooks, skills, and MCP integrations can transform Claude Code into a structured, composable workflow engine. Drawing from building <a href=\"https://www.aitmpl.com/skills\" target=\"_blank\">aitmpl.com</a> and shipping these patterns in production at scale, I'll show how developers can stop prompting from scratch and start building on top of a shared, evolving component layer.</p>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        156534
+      ]
+    },
+    {
+      "id": 3704,
+      "slug": "a-brief-history-of-code-review-and-whats-next",
+      "title": "A Brief History of Code Review (And What's Next)",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Code review has come a long way. We’ve evolved from manual inspections and email patches to modern pull requests and automated testing. Yet, one big problem remains: developers are still stuck waiting on human approvals. Join me for a walk through the history of code review to see how our processes have adapted over the last 30 years. We'll examine the limits of our current workflows and explore how the new era of AI-assisted reviews is finally solving the code review bottleneck.</p>",
+      "tags": [
+        {
+          "label": "code quality",
+          "slug": "code-quality",
+          "id": 64
+        }
+      ],
+      "speakerIds": [
+        159112
+      ]
+    },
+    {
+      "id": 3625,
+      "slug": "the-state-of-ai-for-web-development",
+      "title": "The State of AI for Web Development",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>A look through the main trends revealed by this year's State of Web Dev AI survey results, based on data collected from over 6800 developers. </p>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        136488
+      ]
+    },
+    {
+      "id": 3375,
+      "slug": "autonomous-ai-agents-in-action-with-the-ralph-wiggum-method",
+      "title": "Autonomous AI Agents in Action With the Ralph Wiggum Method",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>The hype around AI coding agents is very real, and autonomous coding systems are improving fast. In this talk, we'll explore the \"Ralph Wiggum\" method, where AI agents run in persistent iteration cycles until tasks are actually complete. You will learn about backpressure mechanisms to let the LLM self-correct and retry without human intervention. We will discuss how to structure the prompts, practical patterns for turning test failures into actionable AI feedback, and honest insights about when this approach works best versus where it falls flat. This is about making AI agents actually useful for real work by applying agentic engineering principles, not vibe coding. If you're curious about the future of AI-assisted development and want to see what's possible when we design systems that expect and handle failure, this talk is for you.</p>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        139058
+      ]
+    },
+    {
+      "id": 3606,
+      "slug": "turbopack-updates",
+      "title": "Chunking",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>We look into how bundlers place modules into output files in a process called \"chunking\".</p><p>What are the competing metrics that can be influenced by chunking?</p><p>Why is CSS and JS chunking completely different?</p><p>What are performance considerations for large apps?</p><p>How does JS chunking and CSS chunking work in Webpack/Turbopack/Next.js (on a high level)?</p>",
+      "tags": [
+        {
+          "label": "tooling",
+          "slug": "tooling",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        2339
+      ]
+    },
+    {
+      "id": 3280,
+      "slug": "open-source-voice-ai-how-we-built-chatgpts-voice-mode-infrastructure",
+      "title": "Open Source Voice AI: How We Built ChatGPT's Voice Mode Infrastructure",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 2,
+      "abstractHtml": "<p>Ever wondered what it takes to power millions of voice conversations at ChatGPT's scale?</p><p>When OpenAI needed infrastructure for ChatGPT's Advanced Voice Mode, they turned to LiveKit's open source infrastructure. Not a proprietary black box. Not a closed platform. Open source software that anyone can use, modify, and deploy.</p><p>In this talk, I'll take you behind the scenes of building production voice AI infrastructure that handles millions of conversations:</p><ul><li>Why Open Source for Production AI – The technical and business reasons behind the choice</li><li>Architecture Decisions – How we built for scale, reliability, and low latency</li><li>Scaling to Millions of Calls – The challenges you don't anticipate until you hit them</li><li>Lessons Learned – What we'd do differently knowing what we know now</li><li>What's Possible Now – How you can use the same infrastructure for your projects</li></ul><p>This isn't a sales pitch, it's a technical deep dive with real production metrics, architectural diagrams, and honest discussions about trade-offs. You'll see the actual stack, understand the scaling challenges, and learn from our mistakes.</p><p>Whether you're building your first voice agent or scaling to production, you'll walk away with insights from one of the largest voice AI deployments in the world. Because the infrastructure powering ChatGPT's voice mode is open source, and it's available to everyone.</p>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        3039
+      ]
+    },
+    {
+      "id": 3693,
+      "slug": "no-servers-no-cloud-no-masters-make-p2p-apps",
+      "title": "Pear: Releasing Production P2P Apps",
+      "kind": "workshop",
+      "format": "Remote",
+      "startsAt": "2026-06-03T14:00:00.000Z",
+      "endsAt": "2026-06-03T17:00:00.000Z",
+      "durationHours": 1,
+      "abstractHtml": "<p>All it takes is a module and a CLI tool to build and deploy production peer-to-peer applications. In this workshop:</p><ul><li>Build a realtime peer-to-peer application</li><li>Connect with others on your own application, completely peer-to-peer.</li><li>Understand how to deploy, including production practices, principles and tooling</li></ul><p>This is for anyone who builds with JavaScript and anyone who deploys applications.</p>",
+      "tags": [],
+      "speakerIds": [
+        107776,
+        158469
+      ]
+    },
+    {
+      "id": 3593,
+      "slug": "migrating-to-micro-frontends",
+      "title": "Designing a Migration to Micro-Frontends",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Migrating to a micro-frontend architecture promises scalability, faster development cycles, and autonomous teams but the journey is rarely straightforward. </p><p>Drawing on real-world experiences and insights from modernising 100s of companies, this talk explores the practical lessons, challenges, and trade-offs companies encounter when adopting micro-frontends.</p><p>You’ll learn about strategies for defining clear boundaries, handling inter-team dependencies, evolving your architecture incrementally, and avoiding common pitfalls that can derail projects.</p>",
+      "tags": [
+        {
+          "label": "architecture",
+          "slug": "architecture",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        19886
+      ]
+    },
+    {
+      "id": 3582,
+      "slug": "taking-a-dump-using-heap-dumps-to-find-and-fix-nodejs-memory-and-cpu-problems",
+      "title": "Taking a Dump: Using Heap Dumps to Find and Fix NodeJS Memory and CPU Problems",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>JavaScript uses Garbage Collection (GC) for memory management. As a result, many developers that use JavaScript based systems, such as NodeJS, assume that they’re free of memory issues. Unfortunately this is incorrect, and many NodeJS-based services suffer from memory management problems such as leaks and excessive GC CPU cost. But finding, understanding, and resolving memory issues can be very challenging, because a problem in any part of the application impacts the application as a whole. Also, they may only manifest under load, in production environments. In this session I will explain how to find and fix such issues using the heap dump feature that is built into NodeJS. And I will show how to use the DevTools memory panel to analyze such dumps.</p>",
+      "tags": [
+        {
+          "label": "performance",
+          "slug": "performance",
+          "id": 5
+        }
+      ],
+      "speakerIds": [
+        19529
+      ]
+    },
+    {
+      "id": 3683,
+      "slug": "rustifying-vite-designing-a-hybrid-toolchain-for-the-real-world",
+      "title": "Rustifying Vite: Designing a Hybrid Toolchain for the Real World",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>JavaScript tooling is fast until it isn't. As projects scale, even well-designed JS-based tools start to hit ceilings around cold starts, dealing with large dependency graphs, and CPU-heavy transforms. The obvious answer seems to be \"rewrite it in Rust\" except that reality is messier.</p><p>This talk is a deep dive into what actually happens when you introduce Rust into a JavaScript-first toolchain, with Vite as the core example. We'll explore how Vite’s architecture enables selective rustification, and what we learned from building hybrid pipelines that mix JavaScript and Rust without wrecking DX.</p>",
+      "tags": [
+        {
+          "label": "vite",
+          "slug": "vite",
+          "id": null
+        },
+        {
+          "label": "tooling",
+          "slug": "tooling",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        18122
+      ]
+    },
+    {
+      "id": 3628,
+      "slug": "mcp-apps-and-the-nearly-headless-web",
+      "title": "MCP Apps – the Next Web",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>MCP Apps are the last piece in moving toward a new web - one that's \"nearly\" headless. Autonomous agents, not humans, will interact with most websites through MCP, APIs, and other data channels. Websites and browsers become obsolete, replaced by personal assistants that orchestrate tasks on our behalf. In rare cases, agents will fall back to browser capabilities to navigate sites that aren't yet agent-ready.</p><p>But we'll still need the last mile.</p><p>Some moments still require human eyes and human input: choosing a seat at a venue, completing a check-in, reviewing a 3D model, verifying intent on important decisions. This is where MCP Apps come in - letting tools, websites, and services send composable, interactive chunks of UI directly to agents, exactly when needed, maintaining brand and identity.</p><p>We'll explore the full cycle of this nearly headless web: the infrastructure required to support autonomy and trust, the new UI layer, and how assistants are becoming the new browsers.</p><p>MCP Apps redefine the web's interface. Headless, but with a human eye at the end.</p>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        2109,
+        155429
+      ]
+    },
+    {
+      "id": 3454,
+      "slug": "using-spec-driven-development-for-production-workflows-3454",
+      "title": "Using Spec-Driven Development for Production Workflows",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>AI coding assistants are great at completing small tasks or features. But what do you do when you're working with more complex codebases and need to build in-depth features that require upfront planning</p><p>This talk explores spec-driven development as a solution to this problem. I'll show you how modern AI coding assistants can help break down complex tasks into three distinct phases. We'll look at the real-world tradeoffs of this approach, and most importantly, how you can use it in your own projects right away.</p>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        26132
+      ]
+    },
+    {
+      "id": 3590,
+      "slug": "ai-can-generate-tests-for-you-now-what",
+      "title": "AI Can Generate Tests for You, Now What?",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Tools like Playwright MCP (or AI) or Claude Code can generate tests for your code.</p><p>Cursor can give you testing suggestions about your codebase that sounds logical within seconds also.</p><p>Testing has never felt this easy before.</p><p>Until the need for a full scale, seamless are effective testing strategy for your product arises.</p><p>How do you know if these generated tests and suggestions really fit your standards and needs, despite looking so good?</p><p>How do you, as the lead engineer, balance the generated tests across different testing quadrants, between the “what” and the “when” of a testing automation pillar and design a scalable architecture for your team, and beyond?</p><p>How do you combine these AI tools to architect a scalable AI-driven testing workflow and still fully own your team’s code quality?</p><p>Join my talk and let’s find out.</p>",
+      "tags": [
+        {
+          "label": "testing",
+          "slug": "testing",
+          "id": 10
+        }
+      ],
+      "speakerIds": [
+        3844
+      ]
+    },
+    {
+      "id": 3287,
+      "slug": "life-of-an-esm-in-nodejs-and-how-its-changing-for-the-better",
+      "title": "Life of an ESM in Node.js – and How It's Changing for the Better",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>The JavaScript ecosystem is moving towards a standardized module system, and Node.js is evolving to aid its adoption. What actually happens when Node.js loads an ES module today? This talk walks the full pipeline - resolution, loading, parsing, compilation, linking, instantiation, and evaluation. We will cover how the work is split between V8 and Node.js, where Node.js differs from browsers and bundlers, and the recent changes in Node.js that unlocks new patterns for better interop, performance, and customization in ESM. You will leave with a clearer mental model of how ESM is loaded in Node.js, shed obsolete knowledge and misconceptions, understand where to look when your modules don't work, and learn about the new capabilities that will help you write, run, and share ESM code better on Node.js today.</p>",
+      "tags": [
+        {
+          "label": "node.js",
+          "slug": "nodejs",
+          "id": 61
+        },
+        {
+          "label": "backend",
+          "slug": "backend",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        19919
+      ]
+    },
+    {
+      "id": 3701,
+      "slug": "personalisation-without-the-price-tag-local-llms-for-javascript-developers",
+      "title": "Personalisation Without the Price Tag - Local LLMs for JavaScript Developers",
+      "kind": "workshop",
+      "format": "Remote",
+      "startsAt": "2026-06-04T14:00:00.000Z",
+      "endsAt": "2026-06-04T17:00:00.000Z",
+      "durationHours": 1,
+      "abstractHtml": "<p>LLMs are powerful but unpredictable and most tutorials skip the part where you actually have to deal with that in production code. This workshop teaches you to use generative AI as an engineering tool: how to structure prompts around schemas, validate and repair non-deterministic output, and run models locally so you control the cost and the carbon.<br /><br />We'll generate a world for a roleplaying game as our teaching context it's a fun, low-stakes domain that makes the hard problems visible. The patterns you leave with apply anywhere you want to bring LLMs into a typed system.<br /><br />No ML background required. Just TypeScript and a laptop.</p>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        135749
+      ]
+    },
+    {
+      "id": 3566,
+      "slug": "supercharging-your-tooling-with-rust",
+      "title": "Supercharging Your Tooling With Rust",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Yarn is the latest tool to join the Rust revolution. But is rewriting JavaScript tooling in Rust a necessity or just a trend? In this talk we'll dive into Yarn's recent updates to understand why they made the switch and how it went. We will discuss whether a fully Rust-based toolchain is inevitable and, crucially, what role Node.js will play in this new landscape.</p>",
+      "tags": [
+        {
+          "label": "tooling",
+          "slug": "tooling",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        2087
+      ]
+    },
+    {
+      "id": 3615,
+      "slug": "a-leak-in-the-shell-how-refactoring-autocomplete-broke-us-and-how-we-fixed-it",
+      "title": "A Leak in the Shell – How Refactoring Autocomplete Broke Us and How We Fixed It",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Improving the autocomplete in MongoDB's database CLI seemed like a great idea. But when the team tried to flip the feature flag, things quickly started to go sideways: A story of memory leaks, bugs that touch the very core of JavaScript as a language, and hard-learned lessons about testing and performance.</p>",
+      "tags": [
+        {
+          "label": "performance",
+          "slug": "performance",
+          "id": 5
+        },
+        {
+          "label": "testing",
+          "slug": "testing",
+          "id": 10
+        },
+        {
+          "label": "database",
+          "slug": "database",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        2502
+      ]
+    },
+    {
+      "id": 3673,
+      "slug": "no-servers-no-cloud-no-masters-make-p2p-apps-with-pear",
+      "title": "No Servers, No Cloud, No Masters: Make P2P Apps",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Battle-tested applications with peer-to-peer OTA updates are running in production. Rapidly growing with millions of users added monthly.</p><p>Using a module and a CLI tool, you too can deploy a peer-to-peer production application with drastically lower complexity than traditional deployment means.</p>",
+      "tags": [],
+      "speakerIds": [
+        107776
+      ]
+    },
+    {
+      "id": 3580,
+      "slug": "software-craftless-writing-code-that-would-make-a-goat-vomit",
+      "title": "Software Craftless: Writing Code That Would Make a Goat Vomit",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Most technical talks teach you how to write clean, scalable, maintainable code. This one does not. Here you will learn how to write code that confuses, deceives, and breaks things in unexpected ways... on purpose. And on top of that, in JavaScript.</p><p>Discover how to:</p><ul><li>Hide bugs so well that even you cannot find them</li><li>Create features that break just by looking at them</li><li>Design programs that only work on your local machine</li><li>Develop functions that return anxiety</li><li>Implement code structures that are illegal in 42 countries</li></ul><p>Because if nothing and no one understands your code... they cannot fire you. This is the talk you did not know you needed. Join me, and together we will write code so twisted it would make a goat throw up. </p>",
+      "tags": [
+        {
+          "label": "fun demos",
+          "slug": "fun-demos",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        154838
+      ]
+    },
+    {
+      "id": 3483,
+      "slug": "building-a-javascript-engine-in-rust-lessons-from-boa",
+      "title": "Building a JavaScript Engine in Rust: Lessons From Boa",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>JavaScript engines power the web, but what does it actually take to build one, and even contribute to the ones used by billions?</p><p>In this talk, I'll share the journey of creating Boa, a JavaScript engine written in Rust, and what it taught me about how JavaScript really works under the hood. We'll explore how code is parsed and executed, and the surprising complexity hidden inside the ECMAScript specification.</p><p>But building an engine wasn't just a technical challenge, it was also about building a community. I'll share lessons from leading an open-source project, growing contributors, and navigating the realities of maintaining a language runtime.</p><p>Finally, we'll look at how this work extended beyond Boa, culminating in contributions to V8, the engine that powers Chrome, through the implementation of Temporal in Rust. This is the story of how an open-source project can evolve from experimentation to influencing the broader JavaScript ecosystem.</p>",
+      "tags": [
+        {
+          "label": "js runtimes",
+          "slug": "js-runtimes",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        153451
+      ]
+    },
+    {
+      "id": 3289,
+      "slug": "from-legacy-to-delight-the-future-of-nodejs-dx",
+      "title": "From Legacy to Delight: The Future of Node.js DX",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>For over a decade, Node.js documentation relied on legacy tooling, despite being the critical source of truth for @types/node, Bun, Deno, and AI models. In this talk, we unveil the engineering behind @nodejs/doc-kit – the modular successor to Node’s documentation engine. Discover how we parse massive ASTs and leverage modern Web Standards to solve complex rendering and accessibility issues, creating a high-performance experience designed to delight humans and power the ecosystem.</p>",
+      "tags": [
+        {
+          "label": "node.js",
+          "slug": "nodejs",
+          "id": 61
+        }
+      ],
+      "speakerIds": [
+        24261
+      ]
+    },
+    {
+      "id": 3443,
+      "slug": "how-i-taught-llms-how-to-svelte",
+      "title": "How I Taught LLMs How to Svelte",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>It's undeniable that LLMs are slowly (and not even that much) but steadily changing the way we write code. But they have a problem: once you start using something outside of their training set, the performance quickly degrades.</p><p>Releasing Svelte 5 (with a pretty big syntax rewrite) right before those LLMs started to get good at code was unfortunate, but luckily, there's a way around this! MCP servers can add context for the LLM and guide our future overlords on how to write perfect Svelte code. Learn how we've built the official Svelte MCP and which techniques we used to make LLMs master Svelte 5's runes and reactivity!</p>",
+      "tags": [
+        {
+          "label": "svelte",
+          "slug": "svelte",
+          "id": 276
+        }
+      ],
+      "speakerIds": [
+        28672
+      ]
+    },
+    {
+      "id": 3568,
+      "slug": "building-chatgpt-and-mcp-apps-with-all-the-comfort-of-modern-typescript-devx",
+      "title": "Building ChatGPT and MCP Apps with All the Comfort of Modern TypeScript DevX",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Billion of users are starting their searches on ChatGPT instead of Google.</p><p>For JavaScript developers, this isn't just a trend, it's a new runtime: ChatGPT Apps. These new apps serves as a replacement for traditional web and mobile applications: interactive, tool-powered experiences living inside the world's fastest-growing AI platform. They benefit from packing an LLM right within the application.</p><p>Giants have already shipped their own: Booking, Expedia, Accor, Figma, Uber... Now it's time to build yours!</p><p>I built Skybridge, an open-source TypeScript framework for building them, and it comes packed with everything you'd expect from a modern JS dev environment. Come and learn how to build in this new ecosystem!</p>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        },
+        {
+          "label": "web standards",
+          "slug": "web-standards",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        155613
+      ]
+    },
+    {
+      "id": 3602,
+      "slug": "html-in-canvas-bridging-ui-and-gpu-on-the-web",
+      "title": "HTML in Canvas: Bridging UI and GPU on the Web",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Modern web development still relies on a strong separation between HTML/CSS for UI and Canvas/WebGL for rendering. In practice, combining both often leads to complex synchronization logic and a series of workarounds.</p><p>In this talk, we’ll first walk through how these problems are typically solved today — including scroll synchronization, frame loop timing, scissor-based rendering, and mapping DOM elements into a WebGL scene — and why these approaches tend to be fragile and hard to scale.</p><p>Using a set of experiments and websites developed at basement.studio, we’ll show these patterns in practice, combining real layouts with shaders and interactive effects.</p><p>From there, we’ll introduce HTML-in-Canvas and show how it simplifies many of these problems — not as a finalized solution, but as a direction that removes the need for most of the synchronization and rendering workarounds we rely on today.</p><p>We’ll also cover the challenges of building UI directly in WebGL, where layout, text, and interactivity become difficult to manage, especially in environments like WebXR.</p>",
+      "tags": [
+        {
+          "label": "webgl",
+          "slug": "webgl",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        157961,
+        157962
+      ]
+    },
+    {
+      "id": 3608,
+      "slug": "the-latest-from-deno",
+      "title": "The Latest From Deno",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Deno has quietly evolved into far more than a simple server-side runtime. With built-in TypeScript, OpenTelemetry integration, ngrok-like network tunnelling, and deep Node.js compatibility, it's already a powerhouse; but we've been working on something bigger. In this talk, I'll introduce Deno Desktop: a brand new capability that completely changes what you can build with Deno and a single 'deno compile' command. If you've ever wished the JS runtime could meet you where your users actually are, you won't want to miss this one.</p>",
+      "tags": [
+        {
+          "label": "js runtimes",
+          "slug": "js-runtimes",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        96428
+      ]
+    },
+    {
+      "id": 3600,
+      "slug": "400-tech-leads-same-problems-none-of-them-technical",
+      "title": "400 Tech Leads. Same Problems. None of Them Technical",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>After training and coaching more than 400 tech leads across companies and industries, one pattern keeps repeating: when tech leads struggle, it’s rarely a technical gap.</p><p>In this talk, Anemari Fiser shares the most common challenges tech leads bring into coaching sessions - overload, unclear expectations, ownership confusion - and assumed alignment and why “getting better technically” almost never fixes them.</p><p>Drawing from real coaching and training examples, the talk explores where tech leads get stuck, what they think the problem is, and the small but meaningful shifts that help them move forward.</p>",
+      "tags": [
+        {
+          "label": "soft skills",
+          "slug": "soft-skills",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        106548
+      ]
+    },
+    {
+      "id": 3366,
+      "slug": "devops-for-front-end-developers-from-local-code-to-production-by-docker-captain-3366",
+      "title": "DevOps for Front-end Developers: From Local Code to Production by Docker Captain",
+      "kind": "workshop",
+      "format": "InPerson",
+      "startsAt": "2026-06-10T12:00:00.000Z",
+      "endsAt": "2026-06-10T16:00:00.000Z",
+      "durationHours": 1,
+      "abstractHtml": "<div><span style=\"font-size:16px\">Many front-end developers build modern applications with confidence, but struggle when it comes to shipping those applications to production. Docker, CI/CD, environment configuration, performance tuning, and deployment often remain “someone else’s job” — until something breaks and becomes your responsibility. This workshop closes that gap.<br />It’s a practical, production-focused workshop designed for front-end developers who want to take full ownership of their front-end applications — from local development to stable, production-ready deployments.<br /><br />You’ll learn how to:<br /></span></div><ul><li>Dockerize front-end applications for both development and production</li><li>Create optimized, production-ready Docker images for modern front-end frameworks</li><li>Optimize front-end applications for performance, stability, and reliability</li><li>Avoid common production mistakes seen in real-world front-end projects</li></ul><p><em>Docker for Front-end Developers</em> is a practical book designed specifically for front-end engineers who want to truly understand and confidently use Docker in real-world projects — written by Docker Captain and author of the official Docker React.js sample documentation Kristiyan Velkov — <strong>with 30% off using code DOCKER30</strong>.</p>",
+      "tags": [
+        {
+          "label": "devops",
+          "slug": "devops",
+          "id": null
+        },
+        {
+          "label": "optimization",
+          "slug": "optimization",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        111674
+      ]
+    },
+    {
+      "id": 3576,
+      "slug": "out-of-order-streaming-the-future-of-web-development",
+      "title": "Out-of-Order Streaming – The Future of Web Development",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>As the pendulum of web development swings back towards the server, streaming has become increasingly popular. Specifically, out-of-order streaming.</p><p>Let's build our very own simplified version to explore how it works, what problems we are trying to solve, and what this future of web development looks like.</p>",
+      "tags": [
+        {
+          "label": "architecture",
+          "slug": "architecture",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        114410
+      ]
+    },
+    {
+      "id": 3598,
+      "slug": "click-ship-done-ai-agents-on-cloudflare",
+      "title": "Click. Ship. Done. AI Agents on Cloudflare",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>AI agents are almost everywhere, but deploying one yourself still feels like it requires a PhD in infrastructure. What if it didn't? This talk breaks down what AI agents actually are, how they work, and why Cloudflare's platform makes it ridiculously easy to build and ship your own. Everything written with the language you love (or hate): JavaScript.</p><p>We'll cover the agent loop, introduce MCP (Model Context Protocol) as the glue that connects agents to real world tools, and walk through Cloudflare's stack, from Durable Objects for stateful execution to Workers AI for inference.</p><p>By the end, you'll deploy your own agent using a single command from a shared GitHub repo. No PhD required.</p>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        3123
+      ]
+    },
+    {
+      "id": 3378,
+      "slug": "building-ai-powered-apps-with-tanstack-ai-from-setup-to-chat-tools",
+      "title": "Building AI-Powered Apps with TanStack AI - From Setup to Chat Tools",
+      "kind": "workshop",
+      "format": "InPerson",
+      "startsAt": "2026-06-10T07:00:00.000Z",
+      "endsAt": "2026-06-10T11:00:00.000Z",
+      "durationHours": 3,
+      "abstractHtml": "<p>In this hands-on workshop, you’ll learn how to integrate AI directly into your application using TanStack AI. We’ll build a working AI chat feature end-to-end, starting from server setup and finishing with a streaming client, tool calling, human-in-the-loop workflows, and real debugging using TanStack DevTools.<br /><br />Through guided exercises, you’ll learn how to set up TanStack AI on the server, connect a client application to a streaming AI backend, build a functional chat interface, create your first AI tools, and implement approval flows so humans can stay in control when tools are invoked.<br /><br />By the end of the session, you’ll understand the core building blocks of AI-powered applications and walk away with a solid foundation for adding intelligent chat and tool capabilities to your own apps.<br /><br /> <strong>Workshop outcomes</strong></p><p>When you're finished with this workshop you will:</p><ul><li>Understand how to set up TanStack AI on the server and wire it to a provider (like OpenAI)</li><li>Know how to connect a client app to a streaming AI endpoint and handle incremental updates cleanly</li><li>Build a functional chat UI with a solid state model for messages, streaming tokens, and tool results</li><li>Create and use your first AI tools with clear inputs, outputs, and predictable behavior</li><li>Build human-in-the-loop workflows with tool approvals so your app can ask for confirmation before executing sensitive actions</li><li>Debug and inspect your AI app using TanStack DevTools, including tool calls, responses, and streaming behavior</li></ul><p><strong>What you'll learn<br /></strong><br />TanStack AI gives you the primitives to build real AI features, not just a demo prompt box. This workshop focuses on wiring everything together properly, from server-side streaming to client UX, then layering in tools, approvals, and debugging so the final result is something you can confidently evolve into production features.<br /><br />You’ll learn the following through these exercises:</p><ul><li>Server setup - Configure TanStack AI on the server, connect to your model provider, and expose endpoints that support streaming chat</li><li>Streaming and SSE - Implement and consume streaming responses, understand the lifecycle of a stream, and build UI that stays responsive while tokens arrive</li><li>Chat UI and state - Build a chat interface that handles message history, partial responses, loading states, and tool outputs in a clean way</li><li>Tools - Define tools, validate inputs, return structured outputs, and integrate tool results back into the conversation flow</li><li>Human in the loop - Add approval steps for tool execution, implement “approve/deny” flows, and keep users in control when actions matter</li><li>Debugging with TanStack DevTools - Inspect requests, responses, tool calls, timing, and streaming behavior so you can troubleshoot fast and iterate safely</li></ul><p><strong>Prerequisites</strong><br /><br />This workshop assumes you can build and run a React + TypeScript app locally and you are comfortable working with a basic server setup.</p><ul><li>Basic understanding of SSE and streaming is required (we’ll use streaming heavily throughout the workshop)</li><li>Experience with React is required (components, state, props, rendering lists)</li><li>Basic TypeScript knowledge is required (we’ll rely on types for tools and structured outputs)</li><li>You will need an OpenAI API key with available credits to use during the workshop exercises</li></ul>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        152815
+      ]
+    },
+    {
+      "id": 3489,
+      "slug": "creating-ai-agent-skills-that-leverage-mcp-tools",
+      "title": "Let’s Teach Neo Kung-Fu: Building an Agentic Skill with MCP Tools",
+      "kind": "workshop",
+      "format": "Remote",
+      "startsAt": "2026-05-28T14:00:00.000Z",
+      "endsAt": "2026-05-28T15:30:00.000Z",
+      "durationHours": 1,
+      "abstractHtml": "<p>AI coding assistants are evolving from simple autocomplete to autonomous agents that can interact with external systems. But how do you teach an agent to follow your workflows and use the right tools at the right time?</p><p>In this hands-on workshop, you'll discover:</p><ul><li>What MCP (Model Context Protocol) is and how it standardizes tool integration for LLMs</li><li>How Agent Skills package domain-specific knowledge and workflows for AI agents</li><li>The key differences between MCP servers and Skills, and when to use each</li><li>How to create a custom Skill that orchestrates multiple MCP tools into a cohesive workflow</li></ul><p>By the end of this session, you'll build your own AI Skill that uses MCP tools — a Matrix-themed Neo fighting skill.</p><p><strong>Who should attend:</strong> This workshop is ideal for software developers who use AI coding assistants (Claude Code, Cursor, or similar) and want to extend their capabilities with custom integrations and workflows. No prior MCP or Skills experience required — just bring your curiosity and a laptop.</p>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        153479
+      ]
+    },
+    {
+      "id": 3562,
+      "slug": "scaling-javascript-monorepos-at-enterprise-level-lessons-from-200-packages",
+      "title": "Scaling JavaScript Monorepos at Enterprise Level: Lessons From 200+ Packages",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Monorepo Metamorphosis: Reducing CI Load by Over 65% with Nx, pnpm &amp; Predictive Build Graphs</p><p>Does your CI feel slower every time your monorepo grows? In this talk, I’ll share how we transformed a 200+ project JavaScript/TypeScript monorepo by applying predictive dependency graphs, Nx task-hashing, pnpm’s content-addressable workspace, and horizontally scaled runners to eliminate redundant work and shrink build+test cycles by more than 65%. If you’re looking to break the cycle of ever-increasing CI times and unlock real delivery velocity, this session provides a clear and practical blueprint.</p>",
+      "tags": [
+        {
+          "label": "devops",
+          "slug": "devops",
+          "id": null
+        },
+        {
+          "label": "ci cd",
+          "slug": "ci-cd",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        152553
+      ]
+    },
+    {
+      "id": 3329,
+      "slug": "how-we-used-ai-to-build-tanstack-ai",
+      "title": "How We Used AI to Build TanStack AI",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>TanStack AI is an open-source project built to make it easy for developers to use AI in their applications and in this talk Alem will explain how they used AI to help them prototype concepts, solidify API's and ship the final library in under a month's time. Learn practical use-cases for AI in your day to day life through the lessons learned on the development of TanStack AI.</p>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        152815
+      ]
+    },
+    {
+      "id": 3288,
+      "slug": "walking-the-netflix-paved-road-bumps-included-web-framework-hawkins-design-system-and-genai",
+      "title": "Walking the Netflix Paved Road (Bumps Included): Web Framework, Hawkins Design System",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Standardization pays off - but adoption is where teams bleed. An engineer’s view of adopting Netflix’s UI paved road tooling - Web Framework, Hawkins design system - covering the bumps (and fixes) with real-life examples and playbooks you can apply.</p>",
+      "tags": [
+        {
+          "label": "tooling",
+          "slug": "tooling",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        153479
+      ]
+    },
+    {
+      "id": 3349,
+      "slug": "memlab-automating-memory-leak-detection-and-heap-analysis",
+      "title": "MemLab: Automating Memory Leak Detection and Heap Analysis",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Memory leaks in single-page applications are often viewed as mere technical debt, but data shows they directly degrade user experience and engagement. In this talk, we introduce MemLab, an automated framework that identifies memory leaks by simulating user interactions and analyzing heap snapshots.</p>",
+      "tags": [
+        {
+          "label": "frameworks",
+          "slug": "frameworks",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        155020
+      ]
+    },
+    {
+      "id": 3447,
+      "slug": "creating-a-design-system-for-1b-users-in-the-age-of-ai",
+      "title": "Creating a Design System for 1B+ Users in the Age of AI",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>For 11 years the WhatsApp Web platform has been used by a billion people, without any consistent design system the entire time. This talk is the story of I sold the project, built one from scratch, and influenced others, to migrate it into a 1M+ LoC frontend. Plus, how this project was both boosted by AI and strongly benefits AI productivity.</p>",
+      "tags": [
+        {
+          "label": "design systems",
+          "slug": "design-systems",
+          "id": 35
+        }
+      ],
+      "speakerIds": [
+        155283
+      ]
+    },
+    {
+      "id": 3621,
+      "slug": "browser-api-and-assistive-technology-a-love-triangle",
+      "title": "Browser, API and Assistive Technology: A Love Triangle",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Accessibility can often be presented as a checklist but why do your accessibility tests with assistive technology not perform the way you intended? </p><p>The hidden relationship between browsers, accessibility APIs and assistive technology may be the answer to your frustrations. Understanding this may be the necessary tool you need to smoothen your debugging process. </p>",
+      "tags": [
+        {
+          "label": "accessibility",
+          "slug": "accessibility",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        156464
+      ]
+    },
+    {
+      "id": 3537,
+      "slug": "orchestrating-content-workflows-at-netflix-scale",
+      "title": "Orchestrating Content Workflows at Netflix Scale",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Every title that reaches Netflix's millions of subscribers passes through a gauntlet of decisions — some made by rules, some by ML models, and some by human reviewers. And with Netflix's catalog growing faster than ever, getting all of them to work together reliably, at scale, is one of the hardest problems in production systems engineering.</p><p>In this talk, we'll share how we rethought workflow orchestration from the ground up to build a framework where rule-based automation, ML models, and human-in-the-loop review aren't just bolted together — they're first-class citizens in the same pipeline. We'll get into the real challenges: routing decisions across heterogeneous components, isolating failures so a single bad signal doesn't cascade, and closing the feedback loop across the entire system. Along the way, we'll show why the architectural choices that make this work today are exactly what make AI agent integration tomorrow feel like a natural evolution — not a retrofit.</p><p>If you've ever tried to build a production pipeline that doesn't fall apart when one piece changes — this one's for you.</p>",
+      "tags": [
+        {
+          "label": "architecture",
+          "slug": "architecture",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        156939
+      ]
+    },
+    {
+      "id": 3574,
+      "slug": "from-8-years-to-6-months-orchestrating-ai-agents-for-large-scale-refactoring",
+      "title": "From 8 Years to 6 Months: Orchestrating AI Agents for Large-Scale Refactoring",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Refactoring thousands of files to break a client-side monolith is a daunting task, but when our estimation for extracting the client side monolith hit the 8-year mark, we knew manual refactoring wasn't an option, so we built an AI infrastructure engine that is currently compressing that timeline to just 6 months</p><p>This isn't a theoretical proposal, we are currently midway through the process, successfully migrating production code daily and compressing that timeline to just 6 months. In this talk, we'll explore the custom orchestration engine driving this reality, while you will walk away understanding how to combine the deterministic reliability of ASTs with the creative power of LLMs to solve your own \"impossible\" legacy migrations.</p>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        155005,
+        157977
+      ]
+    },
+    {
+      "id": 3588,
+      "slug": "stop-using-json-web-tokens-jwts-for-authorization",
+      "title": "Stop Using JSON Web Tokens (JWTs) for Authorization!",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>JWTs (JSON Web Tokens) are everywhere – frontends, backends, microservices – and for good reason: they're easy to pass around, self-contained, and standardized. But while JWTs can be a solid fit for authentication, using them for authorization is a decision that comes with serious pitfalls – especially in distributed systems.</p><p>In this talk, we’ll explore the technical and security limitations of JWT-based authorization and explain why they're fundamentally incompatible with the needs of modern applications. From the infamous \"\"New Enemy Problem\"\" described in Google’s Zanzibar paper to the vague semantics of scope claims and the difficulty of revoking tokens in-flight, we’ll unpack the real-world consequences of treating JWTs as your AuthZ layer.</p>",
+      "tags": [
+        {
+          "label": "security",
+          "slug": "security",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        154263
+      ]
+    },
+    {
+      "id": 3564,
+      "slug": "auth-under-attack-catching-javascript-auth-failures-in-production-fast",
+      "title": "Auth Under Attack Catching JavaScript Auth Failures in Production Fast",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Auth bugs rarely show up as “login is down.” They show up as redirect loops, stale sessions, broken refresh flows, and permission leaks after “small” changes. This talk walks through one real incident pattern and delivers a repeatable playbook for debugging fast and adding guardrails that keep auth stable in production.</p>",
+      "tags": [
+        {
+          "label": "security",
+          "slug": "security",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        156472
+      ]
+    },
+    {
+      "id": 3578,
+      "slug": "halving-your-ci-pipeline-practical-optimisation-strategies",
+      "title": "Halving Your CI Pipeline – Practical Optimisation Strategies",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Every minute added to your CI pipeline costs real money and real developer time. At ~45 MRs per day and ~340 pipeline runs, a single minute of pipeline overhead translates to nearly 6 hours of lost engineering time daily. This talk presents the complete playbook we used to reduce our Merge Train pipeline from about an hour to about 22 minutes — a ~64% reduction — while improving CI health from the low 80s to the low 90s percent. Covering compute instance migration (with real benchmark data from 10 runs per configuration), service test extraction, CloudWatch optimisation, linter caching, flaky test detection, and cost analysis, attendees leave with a prioritised framework for their own CI optimisation efforts. Every optimisation includes before-and-after metrics, cost impact, and the trade-offs we navigated.</p>",
+      "tags": [
+        {
+          "label": "devops",
+          "slug": "devops",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        156531
+      ]
+    },
+    {
+      "id": 3560,
+      "slug": "rewrite-or-refactor-how-to-safely-move-legacy-apps-to-modern-frameworks",
+      "title": "Rewrite or Refactor? How to Safely Move Legacy Apps to Modern Frameworks",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Sooner or later, every team faces the same question: how do we migrate from legacy code to a modern framework? Should we take the “big bang” approach and rewrite everything from scratch, or should we migrate progressively, piece by piece? In this talk, I’ll share real-world stories from large-scale frontend migrations and highlight the trade-offs of both strategies. We’ll explore the risks of freezing development for months, the complexity of running two worlds in parallel, and the decision-making criteria that help teams pick the right path.</p>",
+      "tags": [
+        {
+          "label": "architecture",
+          "slug": "architecture",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        154511
+      ]
+    },
+    {
+      "id": 3596,
+      "slug": "llm-powered-migrations-of-ui-component",
+      "title": "LLM Powered Migration of UI Component Libraries",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Code migrations are repetitive, time-consuming, and tools like codemods struggle to handle complex transformations without extensive manual effort. What if there was a smarter way to tackle large-scale migrations? In this talk, we explore how LLMs can take the heavy lifting out of such complex code migration and share practical learning and insights.</p>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        157923
+      ]
+    },
+    {
+      "id": 3586,
+      "slug": "black-friday-would-you-choose-the-right-performance-test",
+      "title": "Black Friday: Would You Choose the Right Performance Test?",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Black Friday is one of the most challenging times for any system, as traffic can increase by four to ten times within a short period. Teams often prepare by running performance tests, but they may not be using the right testing method.</p><p>In this talk, I will present a real-life situation where a system seems fine during testing but crashes when faced with actual conditions.</p><p>The main problem isn't the system itself, but the way the test was set up.</p><p>This topic is especially important for teams developing and expanding web applications, especially during high-traffic events like Black Friday.</p><p>It bridges the gap between performance testing strategies and real-world system performance, while also considering business impact.</p>",
+      "tags": [
+        {
+          "label": "performance",
+          "slug": "performance",
+          "id": 5
+        }
+      ],
+      "speakerIds": [
+        156877
+      ]
+    },
+    {
+      "id": 3558,
+      "slug": "think-like-a-tester-what-to-look-for-in-ai-generated-code",
+      "title": "Think Like a Tester: What to Look For in AI-Generated Code",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>AI is writing code faster than ever. But there's a gap: the gap between \"it works\" and \"it works correctly.\"</p><p>As a QA Automation Engineer with 9 years of experience, I've developed the instinct to see what breaks before it breaks. AI generates clean code that hides catastrophic bugs in plain sight. This talk teaches you \"the tester's eye\" – the ability to spot edge cases, boundary conditions, state issues, and silent failures that AI confidently creates.</p><p>You're reviewing AI code with developer eyes trained to see \"does this solve the problem?\" Testers see something different: \"what are all the ways this could fail?\" I'm teaching you to see both.</p>",
+      "tags": [
+        {
+          "label": "testing",
+          "slug": "testing",
+          "id": 10
+        },
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        140555
+      ]
+    },
+    {
+      "id": 3584,
+      "slug": "de-bloating-the-web-the-ecosystem-perfomance-initiative-e18e",
+      "title": "De-bloating the Web: The \"Ecosystem Perfomance\" Initiative (e18e)",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>Join the \"Ecosystem Performance\" initiative to explore our mission to revolutionize the JavaScript ecosystem. We tackle bloated, slow, and outdated dependencies in popular open-source libraries, replacing them with optimized alternatives or crafting our own superior solutions. Our goal is a faster, more secure web, enhancing the developer experience by reducing node_modules overhead and improving overall efficiency. Discover what we've achieved so far, our ongoing efforts, and how you can contribute to shaping a leaner, more performant future for web development.</p>",
+      "tags": [
+        {
+          "label": "performance",
+          "slug": "performance",
+          "id": 5
+        }
+      ],
+      "speakerIds": [
+        154852
+      ]
+    },
+    {
+      "id": 3691,
+      "slug": "client-side-tools-and-multi-agent-architecture",
+      "title": "Client-Side Tools and Multi-Agent Architecture",
+      "kind": "talk",
+      "format": null,
+      "startsAt": null,
+      "endsAt": null,
+      "durationHours": 1,
+      "abstractHtml": "<p>How do you build a dashboard you can't see? A behind-the-scenes look at AG Studio's multi-agent architecture and the client-side tools that let any LLM build reports it otherwise couldn't.</p>",
+      "tags": [
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        65068
+      ]
+    },
+    {
+      "id": 3468,
+      "slug": "voice-agent-bootcamp-build-production-ready-agents-from-scratch",
+      "title": "Voice Agent Bootcamp: Build Production-Ready Agents from Scratch",
+      "kind": "workshop",
+      "format": "Remote",
+      "startsAt": "2026-05-13T14:00:00.000Z",
+      "endsAt": "2026-05-13T17:00:00.000Z",
+      "durationHours": 1,
+      "abstractHtml": "<p>Ready to go from zero to deployed voice agent?</p><p>Voice AI is moving fast, but most tutorials end at \"hello world\" and leave you wondering how to actually ship something to production. This intensive workshop takes you through the entire journey: building a complete voice agent with TypeScript and React, deploying it to production, setting up observability, and creating evaluation frameworks—all the pieces you need for real-world JavaScript applications.</p><p><strong>What you'll build:</strong></p><ul><li>A full-stack voice agent using LiveKit's TypeScript SDK</li><li>React UI with real-time audio visualization and state management</li><li>Production deployment with proper observability</li><li>Automated testing and evaluation frameworks</li></ul><p><strong>Topics covered:</strong></p><ul><li>Setting up WebRTC audio streams with TypeScript</li><li>Integrating STT, LLM, and TTS models in your JavaScript stack</li><li>Building React UI for voice interactions with real-time state</li><li>Handling interruptions and natural turn-taking</li><li>Deploying to production (Vercel)</li><li>Setting up observability and session replay</li><li>Building evaluation frameworks for quality assurance</li></ul><p>This isn't a demo – it's a bootcamp. You'll write TypeScript code, debug issues, and deploy to production. By the end, you'll have a working voice agent and the confidence to build more.</p>",
+      "tags": [
+        {
+          "label": "typescript",
+          "slug": "typescript",
+          "id": 32
+        },
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        3039
+      ]
+    },
+    {
+      "id": 3360,
+      "slug": "building-fullstack-apps-with-ai-tools-like-cursor-composer-3360",
+      "title": "Building Fullstack Apps With Cursor",
+      "kind": "workshop",
+      "format": "Remote",
+      "startsAt": "2026-05-11T14:00:00.000Z",
+      "endsAt": "2026-05-11T17:00:00.000Z",
+      "durationHours": 2,
+      "abstractHtml": "<p><strong>Direct the code. Don't just write it.</strong></p><p>The development landscape is shifting from manual coding to system orchestration. Whether you are a seasoned React engineer looking to 10x your output or a product-driven creator aiming to turn a prototype into a functional app, this workshop is your gateway to AI-native development.</p><p>Join us for a hands-on, 4-hour masterclass where we build a feature-rich, fullstack application from scratch using Cursor Composer. We skip the boilerplate and focus on the exact workflows used to ship high-quality features in minutes, not days.</p><p><strong>What You’ll Master</strong></p><ul><li>AI Orchestration: Move beyond simple autocomplete to manage multi-file changes and complex app logic.</li><li>The .cursorrules Framework: Learn how to enforce project standards and prevent AI \"hallucinations\" for consistent, professional code.</li><li>Rapid Fullstack Scaffolding: Generate type-safe database schemas and backend logic instantly.</li><li>High-Fidelity UI Iteration: Transform prompts into polished, responsive interfaces using modern CSS and component libraries.</li><li>Hardening &amp; Refactoring: Use AI to hunt bugs, clean up \"spaghetti\" code, and generate comprehensive test suites.</li></ul><p><strong>The Project</strong></p><p>We will build a modern, data-driven web application that demonstrates the power of AI-assisted development. By the end of the session, you will have a functional codebase that showcases complex data relationships, dynamic UI, and optimized state management.</p><p><br /></p><p><strong>Who Is This For?</strong></p><p>Developers who want to eliminate repetitive tasks and focus on high-level architecture.</p><p>Founders &amp; Prototypers who need to bridge the gap between an idea and a working product rapidly.</p><p>Tech Enthusiasts eager to master the professional AI-native toolkit.</p><p>Requirement: Bring a laptop with Cursor installed. We provide the roadmap; the AI provides the speed; you provide the vision.</p><p><br /></p><p>As this is a live online session, we encourage you to sign up ASAP to receive the pre-workshop setup guide and ensure you are ready to build from minute one.</p>",
+      "tags": [
+        {
+          "label": "best practices",
+          "slug": "best-practices",
+          "id": 19
+        }
+      ],
+      "speakerIds": [
+        2139
+      ]
+    },
+    {
+      "id": 3376,
+      "slug": "operating-agent-based-systems-overview-configure-run-orchestrate-monitor",
+      "title": "Operating Agent-Based Systems - Overview, Configure, Run, Orchestrate, Monitor",
+      "kind": "workshop",
+      "format": "Remote",
+      "startsAt": "2026-05-18T14:00:00.000Z",
+      "endsAt": "2026-05-18T17:00:00.000Z",
+      "durationHours": 1,
+      "abstractHtml": "<p>This workshop explores how standalone agents operate at the runtime level and how they differ from traditional AI pipelines. We’ll examine agent architecture, planning loops, memory models, and tool execution. We’ll also cover multi-agent coordination, including state isolation and resource control. A key focus is security and governance — capability-based access, sandboxing, and injection risks. Finally, we’ll address observability and supervision: tracing reasoning, auditing tool usage, and implementing control mechanisms for production systems.<br /><br />All examples and concepts will be grounded in the Node.js stack and we will explore why Node.js is particularly well-suited for building production-ready agent runtimes — serving as the control plane for supervision, integration, streaming execution, and distributed coordination.<br /><br /><strong>References</strong>: OpenClaw, n8n, LangChain.</p>",
+      "tags": [
+        {
+          "label": "node.js",
+          "slug": "nodejs",
+          "id": 61
+        },
+        {
+          "label": "artificial intelligence",
+          "slug": "artificial-intelligence",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        2335,
+        18886
+      ]
+    },
+    {
+      "id": 3671,
+      "slug": "advanced-claude-code-production-workflows-subagents-and-autonomous-execution-3671",
+      "title": "Advanced Claude Code — Production Workflows, Subagents, and Autonomous Execution",
+      "kind": "workshop",
+      "format": "Remote",
+      "startsAt": "2026-05-22T14:00:00.000Z",
+      "endsAt": "2026-05-22T17:00:00.000Z",
+      "durationHours": 2,
+      "abstractHtml": "<p>Most developers using AI coding tools hit the same wall on real projects: the demos look magical, but production work falls apart. This workshop shows why — and what to do about it.</p><p>The core lesson: <strong>execution is fast and cheap only when preparation is deep.</strong></p><p><strong>What we'll build, live</strong></p><p>From an empty directory to a deployed production app — a mobile-first Conference Companion App with the event schedule, speaker profiles, search, and favourites. Attendees will open it on their phones before the session ends.</p><p><br /></p><p><strong>The four stages of shipping with AI</strong></p><p>You'll see a complete production workflow, deliberately weighted toward the work that actually determines quality:</p><p><strong>- Research</strong> — Gathering everything the AI will need upfront: official docs, code patterns, real data. By execution time, nothing has to be searched for. This is where quality comes from.</p><p><strong>- Planning</strong> — Breaking the app into clear tasks with acceptance criteria, written live. Skipping this is why most AI builds fail.</p><p><strong>- Execution</strong> — Ten tasks running in parallel via git worktrees, orchestrated by Navigator (a Claude Code plugin) on a React/Next.js stack. Code and docs written together.</p><p><strong>- Review &amp; Ship</strong> — Quality gates (tests, lint, types, build), clean commits, merge, deploy to Vercel. Live URL shared with the room.</p><p><br /></p><p><strong>Bonus: Human + Claude Code vs. fully autonomous agent</strong></p><p>While the live build runs, <strong>Pilot</strong> — our autonomous coding agent — builds the same app from the same spec, on its own, in a separate repository. At the end, we open both side by side: two working apps, two pull request histories, two live URLs. One human-driven, one fully autonomous.</p><p><br /></p><p><strong>You'll leave with</strong></p><p>A repeatable workflow for shipping real software with Claude Code, plus concrete techniques you can apply to your own projects on Monday morning.</p>",
+      "tags": [
+        {
+          "label": "mobile apps",
+          "slug": "mobile-apps",
+          "id": null
+        }
+      ],
+      "speakerIds": [
+        156901
+      ]
+    }
+  ],
+  "speakers": [
+    {
+      "id": 18374,
+      "nickname": "wes_bos",
+      "name": "Wes Bos",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1670334021/dev/Wes_Bos_hib0hw.jpg",
+      "company": "Syntax.fm",
+      "location": "Canada",
+      "bio": "Wes Bos is a Full Stack developer from Canada. Constantly learning, he creates web development courses focused on JavaScript, TypeScript, React, CSS, Node.js and whatever else comes his way. Wes is the co-host of the popular Syntax.fm podcast and has taught over half a million people JavaScript and has spoken at dozens of conferences around the world.",
+      "github": null,
+      "twitter": "wesbos",
+      "bluesky": "wesbos.com",
+      "twitterFollowers": 434022,
+      "companyLogo": null,
+      "sessionIds": [
+        3635
+      ]
+    },
+    {
+      "id": 33209,
+      "nickname": "eddie_jaoude",
+      "name": "Eddie Jaoude",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1776888614/DSC08784_csszvi.jpg",
+      "company": "PayPal",
+      "location": "UK",
+      "bio": "Eddie is a Fullstack developer with more than 15 years of experience, and has worked with UK Government institutions and banks, global fintechs and startups. In the last 6 years he has focused on creating technical content on Javascript/Typescript, databases, DevOps, testing and AI.",
+      "github": "eddiejaoude",
+      "twitter": "eddiejaoude",
+      "bluesky": null,
+      "twitterFollowers": 205752,
+      "companyLogo": null,
+      "sessionIds": [
+        3604
+      ]
+    },
+    {
+      "id": 7701,
+      "nickname": "dominik_dorfmeister",
+      "name": "Dominik Dorfmeister",
+      "avatar": "https://avatars.githubusercontent.com/u/1021430?v=4",
+      "company": "Sentry",
+      "location": "Austria",
+      "bio": "Dominik is a Frontend Engineer, React-Query maintainer working at Sentry, who blogs about all things React and TypeScript (https://tkdodo.eu/blog/).",
+      "github": "TkDodo",
+      "twitter": "TkDodo",
+      "bluesky": "tkdodo.eu",
+      "twitterFollowers": 56628,
+      "companyLogo": null,
+      "sessionIds": [
+        3339,
+        3290
+      ]
+    },
+    {
+      "id": 12996,
+      "nickname": "steve_ruiz",
+      "name": "Steve Ruiz",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1661784558/dev/Steve_Ruiz_jqm1cj.jpg",
+      "company": "tldraw",
+      "location": "UK",
+      "bio": "Steve Ruiz is founder and CEO of tldraw, a London-based startup building an infinite canvas component for the web. The company is known for its tldraw SDK as well as for many viral AI demos including Make Real and tldraw computer. Prior to tldraw, Steve worked on several open source tools for creative products, including perfect-freehand and perfect-arrows.",
+      "github": "steveruizok",
+      "twitter": "steveruizok",
+      "bluesky": "steveruizok.bsky.social",
+      "twitterFollowers": 49457,
+      "companyLogo": null,
+      "sessionIds": [
+        3449
+      ]
+    },
+    {
+      "id": 9873,
+      "nickname": "erick_wendel",
+      "name": "Erick Wendel",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1769617326/eGzDq32gx9E6SmsDRhwVjrtiTfK9j1z%402BjOFARYyuK5E%403D.jpg",
+      "company": "Erick Wendel Training",
+      "location": "Brazil",
+      "bio": "Erick Wendel is a Node.js Core Team Developer, Keynote Speaker, and professional educator. He's delivered over 100 tech talks in 10+ countries and has been recognized as a Node.js Specialist with awards from Google, Microsoft, and GitHub. With his company https://erickwendel.com, Erick has trained over 100K people worldwide.",
+      "github": "erickwendel",
+      "twitter": "erickwendel_",
+      "bluesky": null,
+      "twitterFollowers": 34941,
+      "companyLogo": null,
+      "sessionIds": [
+        3632
+      ]
+    },
+    {
+      "id": 156534,
+      "nickname": "daniel_avila",
+      "name": "Daniel Ávila",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1772547929/Daniel_Avila_nhwqj4.jpg",
+      "company": "Hedgineer",
+      "location": "USA",
+      "bio": "Daniel Ávila is a Chilean AI Software Engineer and open-source builder based in Grand Rapids, MI. He is the creator of Claude Code Templates (aitmpl.com), a component library for Claude Code with 111K+ npm downloads and 21K+ GitHub stars, featured in Anthropic's official documentation and part of the Claude Open Source Program. He is AI Tech Lead at Hedgineer, where he builds enterprise agentic systems for hedge funds in New York. Daniel has presented at major tech events across the US, Spain, Brazil, Peru, and South Korea.",
+      "github": "davila7",
+      "twitter": "dani_avila7",
+      "bluesky": null,
+      "twitterFollowers": 32440,
+      "companyLogo": null,
+      "sessionIds": [
+        3440
+      ]
+    },
+    {
+      "id": 159112,
+      "nickname": "santosh_yadav_159112",
+      "name": "Santosh Yadav",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1779285278/68747470733a2f2f696d616765732e6374666173736574732e6e65742f7335756f39356e66366e6a682f3247574b4a6b454839355345774d6f71784542526f582f33343133643664346338663035303730623964396335343930373562353337632f53616e746f73685f59616461765f30372e30312e323_ilwkgg.avif",
+      "company": "CodeRabbit",
+      "location": "Germany",
+      "bio": "Santosh is a Principal Developer Advocate at CodeRabbit, a GDE for Angular, GitHub Star, Nx Champion and Microsoft MVP. He loves contributing to Angular and its ecosystem and loves monorepos.",
+      "github": "santoshyadavdev",
+      "twitter": "SantoshYadavDev",
+      "bluesky": "santoshyadav.dev",
+      "twitterFollowers": 28937,
+      "companyLogo": null,
+      "sessionIds": [
+        3704
+      ]
+    },
+    {
+      "id": 136488,
+      "nickname": "sacha_greif",
+      "name": "Sacha Greif",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1736881262/Sacha-Greif_ygs0wo.png",
+      "company": "Devographics",
+      "location": "Japan",
+      "bio": "Creator of the State of JS survey.",
+      "github": "sachag",
+      "twitter": "sachagreif",
+      "bluesky": "sachagreif.com",
+      "twitterFollowers": 23616,
+      "companyLogo": "https://gitnation-brandfetch.imgix.net/id7EjUdN7B/w/1315/h/182/theme/light/logo.png?c=1bxidqUpT5BOdAVM6svTD",
+      "sessionIds": [
+        3625
+      ]
+    },
+    {
+      "id": 139058,
+      "nickname": "eddy_139058",
+      "name": "Eddy Vinck",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1769683417/Plftna6cVEyg3r2PGJ1CaT9BozZbUi5%402F2FJgE8khVDU%403D.png",
+      "company": "FrontValue",
+      "location": "Netherlands",
+      "bio": "Eddy is a passionate Software Engineer with 8+ years of experience with a focus on front-end web development, but also expanding in backend, mobile development, and DevOps. Eddy works as a consultant at FrontValue, and he works on SaaS projects on the side.",
+      "github": "EddyVinck",
+      "twitter": "eddyvinckk",
+      "bluesky": "",
+      "twitterFollowers": 20781,
+      "companyLogo": null,
+      "sessionIds": [
+        3375
+      ]
+    },
+    {
+      "id": 2339,
+      "nickname": "tobias_koppers",
+      "name": "Tobias Koppers",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1688661022/tobias_photo_jwodam.jpg",
+      "company": "Vercel",
+      "location": "Germany",
+      "bio": "Creator of Webpack and Turbopack. Father of two children. Likes to play board games.",
+      "github": "sokra",
+      "twitter": "wSokra",
+      "bluesky": "sokra.bsky.social",
+      "twitterFollowers": 19021,
+      "companyLogo": "https://gitnation-brandfetch.imgix.net/idDpCfN4VD/theme/dark/logo.svg?c=1bxidqUpT5BOdAVM6svTD",
+      "sessionIds": [
+        3606
+      ]
+    },
+    {
+      "id": 3039,
+      "nickname": "jesse_hall",
+      "name": "Jesse Hall",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1716280033/UI0DDIFibr6L2JYb11BZ2%402BfCLteYglwniF7FJOoLtFo%403D.png",
+      "company": "LiveKit",
+      "location": "USA",
+      "bio": "Jesse Hall, aka @codeSTACKr, is a Staff Developer Advocate at LiveKit.io and a full-stack developer who specializes in teaching web development. He creates articles, videos, live streams, and interactive presentations that help developers build AI-powered web applications. Jesse focuses on JavaScript, TypeScript, React, Node.js, Next.js, Tailwind CSS, and real-time communication technologies. As a self-taught developer, he understands the challenges developers face and breaks down complex topics into clear, actionable content for web developers at all skill levels.",
+      "github": "codeSTACKr",
+      "twitter": "codestackr",
+      "bluesky": null,
+      "twitterFollowers": 17616,
+      "companyLogo": null,
+      "sessionIds": [
+        3280,
+        3468
+      ]
+    },
+    {
+      "id": 19886,
+      "nickname": "luca_mezzalira",
+      "name": "Luca Mezzalira",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1745490391/3IDI5eFx8xI2Xiw1SbHY8t8hiWgC%402BDN0STSJRMMV6FY%403D.jpg",
+      "company": "Author of Building Micro-Frontends book",
+      "location": "UK",
+      "bio": "Luca Mezzalira is principal solutions architect, an international speaker, and an author. Over the past 20 years, he’s mastered software architectures from frontend to the cloud, providing the right solution for the context of the job at hand. OReillyMedia Author",
+      "github": "lucamezzalira",
+      "twitter": "lucamezzalira",
+      "bluesky": null,
+      "twitterFollowers": 13756,
+      "companyLogo": null,
+      "sessionIds": [
+        3593
+      ]
+    },
+    {
+      "id": 19529,
+      "nickname": "dan_shappir",
+      "name": "Dan Shappir",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1671712818/dev/Dan_Shappir_giavfh.jpg",
+      "company": "Snyk",
+      "location": "Israel",
+      "bio": "Dan Shappir is Staff Engineer and Engineering Manager at Snyk. Previously he was Performance Tech Lead at Wix and at NEXT Insurance. Dan has 30 years of software development experience, and has worked on systems ranging from multiuser games to designing and building large scale Web applications. He is an international keynote speaker at technical conferences, a host on the popular JavaScript Jabber podcast, and an Invited Expert on the W3C Web Performance Working Group. Dan holds an MSc in Computer Science.",
+      "github": "dshappir",
+      "twitter": "DanShappir",
+      "bluesky": "danshappir.bsky.social",
+      "twitterFollowers": 8324,
+      "companyLogo": null,
+      "sessionIds": [
+        3582
+      ]
+    },
+    {
+      "id": 18122,
+      "nickname": "alexander_lichter",
+      "name": "Alexander Lichter",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1705610225/OgrmVQcigj3UOxKphOD58%402BWFjR4Cy0v6rxZK%402FgLMmfo%403D.jpg",
+      "company": "VoidZero",
+      "location": "Netherlands",
+      "bio": "Alex is a Developer Relations engineer at VoidZero, a Nuxt.js Team member, Web Engineering Consultant, and open-source enthusiast. He creates tech-focused video content, co-hosts the DejaVue Podcast, speaks at conferences, and leads workshops to empower developers and advance the web ecosystem.",
+      "github": "TheAlexLichter",
+      "twitter": "TheAlexLichter",
+      "bluesky": "thealexlichter.com",
+      "twitterFollowers": 7152,
+      "companyLogo": null,
+      "sessionIds": [
+        3683
+      ]
+    },
+    {
+      "id": 2109,
+      "nickname": "liad_yosef",
+      "name": "Liad Yosef",
+      "avatar": "https://avatars.githubusercontent.com/u/7003853?v=4",
+      "company": "MCP Apps",
+      "location": "Israel",
+      "bio": "Liad Yosef is a seasoned AI lead and software architect. He is the co-builder of MCP-UI, the co-author and maintainer of MCP Apps on the MCP Steering Committee, and a co-creator of GitMCP. Previously AI Lead in Shopify's CEO office, leading agentic interfaces, and currently the co-founder and CTO building the future of human-agentic interfaces at Era Labs.\nLiad is a web enthusiast two decades, passionate about crafting developer-first experiences. When he isn't defining open-source standards for the agentic web, he writes poetry and moonlights as an analog astronaut for the European Space Agency.",
+      "github": "liady",
+      "twitter": "liadyosef",
+      "bluesky": null,
+      "twitterFollowers": 6606,
+      "companyLogo": null,
+      "sessionIds": [
+        3628
+      ]
+    },
+    {
+      "id": 155429,
+      "nickname": "ido_salomon",
+      "name": "Ido Salomon",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1771237853/profile_nou9cv.jpg",
+      "company": "MCP Apps",
+      "location": "Israel",
+      "bio": "Ido Salomon is a seasoned AI lead and software architect. He is the creator of AgentCraft and MCP-UI, the co-creator and maintainer of MCP Apps on the MCP Steering Committee, and the co-creator of GitMCP. Previously, Ido was an architect who led end-user AI at Palo Alto Networks. He is an avid open-source contributor who has created several high-profile projects in the agentic AI space. Today, Ido focuses on the future of human-agent interaction at scale.",
+      "github": null,
+      "twitter": "idosal1",
+      "bluesky": null,
+      "twitterFollowers": 6311,
+      "companyLogo": null,
+      "sessionIds": [
+        3628
+      ]
+    },
+    {
+      "id": 26132,
+      "nickname": "erik_hanchett",
+      "name": "Erik Hanchett",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1761898990/Screenshot_2025-10-31_at_11.22.50_ryyaaw.png",
+      "company": "AWS",
+      "location": "USA",
+      "bio": "My name is Erik Hanchett! I'm an author, teach and educator. I've been teaching software development for over 10 years on my YouTube channel, Program With Erik. I've also have given talks all over the world on frontend and fullstack development. Currently I work as a Senior Developer Advocate at AWS.",
+      "github": "ErikCH",
+      "twitter": "ErikCH",
+      "bluesky": "erikch.bsky.social",
+      "twitterFollowers": 5792,
+      "companyLogo": null,
+      "sessionIds": [
+        3454
+      ]
+    },
+    {
+      "id": 3844,
+      "nickname": "maya_shavin",
+      "name": "Maya Shavin",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1634671847/qfjwe07603nrr9dmqall.jpg",
+      "company": "Salesforce",
+      "location": "Israel",
+      "bio": "Maya is Lead Software Engineer in Salesforce, working extensively with JavaScript and frontend frameworks and based in Israel. She founded and is currently the organizer of the VueJS Israel Meetup Community, helping to create a strong playground for Vue.js lovers and like-minded developers. Maya is also a published author, international speaker and an open-source library maintainer of frontend and web projects. As a core maintainer of StorefrontUI framework for e-commerce, she focuses on delivering performant components and best practices to the community while believing a strong Vanilla JavaScript knowledge is necessary for being a good web developer.",
+      "github": "mayashavin",
+      "twitter": "MayaShavin",
+      "bluesky": "mayashavin.com",
+      "twitterFollowers": 5228,
+      "companyLogo": null,
+      "sessionIds": [
+        3590
+      ]
+    },
+    {
+      "id": 19919,
+      "nickname": "joyee_cheung",
+      "name": "Joyee Cheung",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1673878851/dev/Cheung_Joyee_gdegde.jpg",
+      "company": "Igalia",
+      "location": "Spain",
+      "bio": "Joyee is a software engineer at Igalia. She likes tinkering with V8/Node.js to improve their developer experience, stability and performance. She is a V8 committer and a member of the Node.js TSC.",
+      "github": "joyeecheung",
+      "twitter": "JoyeeCheung",
+      "bluesky": "joyeecheung.bsky.social",
+      "twitterFollowers": 5048,
+      "companyLogo": null,
+      "sessionIds": [
+        3287
+      ]
+    },
+    {
+      "id": 135749,
+      "nickname": "jo_franchetti",
+      "name": "Jo Franchetti",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1734617922/Jo_Franchetti_vn8lga.jpg",
+      "company": "PayPal",
+      "location": "UK",
+      "bio": "Jo is a Software Engineer and Developer Advocate at PayPal. She is passionate about improving developer experience, advocating for TypeScript and teaching good use of the web. She mentors junior developers, advocates a lot for mental health awareness and is devoted to improving the diversity and inclusivity of the tech industry.",
+      "github": "thisisjofrank",
+      "twitter": "thisisjofrank",
+      "bluesky": "thisisjofrank.bsky.social",
+      "twitterFollowers": 4900,
+      "companyLogo": null,
+      "sessionIds": [
+        3701
+      ]
+    },
+    {
+      "id": 2087,
+      "nickname": "mael_nison",
+      "name": "Maël Nison",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1770480472/Mllp6Avt9bKMAgmCOM6oN7MM5G53JVlg%402FbLh4iFfv%402BA%403D.jpg",
+      "company": "Mistral AI",
+      "location": "France",
+      "bio": "Maël is a distinguished software engineer, recognized for his contributions to the tech industry. He is currently the lead maintainer for Yarn, a popular JavaScript package manager. Maël's expertise extends across multiple domains, but he specializes in front-end development, JavaScript, and TypeScript. Known for his practical and innovative solutions, Maël's work has been integral to improving JavaScript's ecosystem. Apart from his professional achievements, Maël is a passionate advocate for open source projects and contributes to various initiatives.",
+      "github": "arcanis",
+      "twitter": "",
+      "bluesky": "mael.dev",
+      "twitterFollowers": 4489,
+      "companyLogo": null,
+      "sessionIds": [
+        3566
+      ]
+    },
+    {
+      "id": 2502,
+      "nickname": "anna_henningsen",
+      "name": "Anna Henningsen",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1624527983/nxhgp8opklljbuafozn3.jpg",
+      "company": "MongoDB",
+      "location": "Germany",
+      "bio": "Now part of the MongoDB Database Experience team, Anna has previously been one of the most active contributors to Node.js core. She is fueled by a passion for Node.js and its community, and loves sharing what she learns both during and outside of working hours.",
+      "github": "addaleax",
+      "twitter": "addaleax",
+      "bluesky": null,
+      "twitterFollowers": 2894,
+      "companyLogo": null,
+      "sessionIds": [
+        3615
+      ]
+    },
+    {
+      "id": 107776,
+      "nickname": "david_mark_clements",
+      "name": "David Mark Clements",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1715848075/David_Mark_Clements_xwq3sb.png",
+      "company": "Tether",
+      "location": null,
+      "bio": "Writing JavaScript since '96, into Node.js from 0.8 (2012). Author, OSS Creator, Teacher, Consultant, Speaker helping to shape the ecosystem. Node Cookbook original and OpenJS Node.js Certifications lead. Driving innovation in the exciting peer-to-peer space, marking a new chapter in decentralized computing: pears.com.",
+      "github": "davidmarkclements",
+      "twitter": "davidmarkclem",
+      "bluesky": null,
+      "twitterFollowers": 2680,
+      "companyLogo": null,
+      "sessionIds": [
+        3693,
+        3673
+      ]
+    },
+    {
+      "id": 154838,
+      "nickname": "cesar_alberca",
+      "name": "César Alberca",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1769949709/MtasCO45yORvALv9kRUCLDvCgtwpeKtg%402FvYKNwZIxu4%403D.png",
+      "company": "Freelance Frontend Architect",
+      "location": "Spain",
+      "bio": "Freelance Frontend Architect | Helping You Build Scalable, AI-Ready, Frontend Architecture. Digital nomad from Spain. As a Freelance Frontend Architect, I design and build robust, maintainable applications using React, Angular and Vue—with a strong focus on architecture, testing, and software craftsmanship. I specialize in DDD, Hexagonal Architecture, and Modular Design Systems.\n\nInternational speaker and Codemotion committee member and ambassador, and a published book author, I’m passionate about empowering teams and sharing knowledge through talks, workshops, and open-source contributions. For me, code is not just a tool—it’s a craft.",
+      "github": "cesalberca",
+      "twitter": "cesalberca",
+      "bluesky": "cesalberca.com",
+      "twitterFollowers": 1754,
+      "companyLogo": null,
+      "sessionIds": [
+        3580
+      ]
+    },
+    {
+      "id": 153451,
+      "nickname": "jason_williams",
+      "name": "Jason Williams",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1766156822/Jase_Williams_nhqkbn.jpg",
+      "company": "Bloomberg LP",
+      "location": "UK",
+      "bio": "Jason Williams is a Senior Software Engineer at Bloomberg LP in London, UK, focusing on performance. His work in performance includes collaborating with the W3C Web Performance Working Group to bring Container Timing to the web, a more accurate improvement over Largest Contentful Paint. He has also collaborated on V8 improvements, bringing heat snapshot times down from 10 minutes to 6 seconds.\n\nIn the open-source community, he is the original author and developer of Boa, an open-source JavaScript engine written in Rust. \n\nHe is heavily involved in the evolution of ECMAScript, serving as an author on the Stage 4 proposal for Promise.allSettled, which ensures all promises settle before returning results. He is also a champion for the Stage 3 Temporal proposal (for which Boa’s temporal_rs the implementation used in Chrome), which aims to provide standard objects and functions for working with dates and times in ECMAScript.",
+      "github": null,
+      "twitter": "jason_williams",
+      "bluesky": "jason-williams.co.uk",
+      "twitterFollowers": 1491,
+      "companyLogo": null,
+      "sessionIds": [
+        3483
+      ]
+    },
+    {
+      "id": 24261,
+      "nickname": "claudio_wunder",
+      "name": " Claudio Wunder",
+      "avatar": "https://avatars.githubusercontent.com/u/12037269?v=4",
+      "company": "HubSpot",
+      "location": "Germany",
+      "bio": "Claudio Wunder is an Engineer at HubSpot working on their Frontend Platform. Claudio is part of OpenJS Foundation's governance and contributes to open source through Node.js, Webpack, OpenJS, GSoC, GNOME and other mediums.",
+      "github": "ovflowd",
+      "twitter": "wunderacle",
+      "bluesky": null,
+      "twitterFollowers": 1485,
+      "companyLogo": null,
+      "sessionIds": [
+        3289
+      ]
+    },
+    {
+      "id": 28672,
+      "nickname": "paoloricciuti",
+      "name": "Paolo Ricciuti",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1750147359/BfrBIi7ajx7pHOH3NCpWwrhMwgX7Uzk8dS6x%402FIW8J8k%403D.jpg",
+      "company": "Mainmatter",
+      "location": "Italy",
+      "bio": "Svelte Ambassador and Maintainer, sometimes called a mad scientist because of weird Javascript experiments that it does. It's one of the co-creator of Sveltelab and generally a huge nerd. Works as a SSE at Mainmatter.",
+      "github": "paoloricciuti",
+      "twitter": "PaoloRicciuti",
+      "bluesky": "paolo.ricciuti.me",
+      "twitterFollowers": 1365,
+      "companyLogo": null,
+      "sessionIds": [
+        3443
+      ]
+    },
+    {
+      "id": 2139,
+      "nickname": "maurice_de_beijer",
+      "name": "Maurice de Beijer",
+      "avatar": "https://avatars.githubusercontent.com/u/3197730?v=4",
+      "company": "Independent Software Consultant and Trainer",
+      "location": "Netherlands",
+      "bio": "Maurice de Beijer is an independent software consultant and trainer. He specializes in TypeScript, ECMAScript, React and Svelte. His work includes popular collaboration software as well as a large, global, safety application for the oil and gas industry. He has a preference for working with startups and smaller, more dynamic companies. Maurice is also active in the open source community. He teaches ECMAScript, TypeScript, React, Cypress, Playwright and RxJS courses. Since 2005, he has received Microsoft’s Yearly Most Valuable Professional Award. Further, Maurice is active in the Dutch dotNed user group and helps organize its meetings.",
+      "github": "mauricedb",
+      "twitter": "MauriceDB",
+      "bluesky": null,
+      "twitterFollowers": 1353,
+      "companyLogo": null,
+      "sessionIds": [
+        3360
+      ]
+    },
+    {
+      "id": 155613,
+      "nickname": "frederic_barthelet",
+      "name": "Frédéric Barthelet",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1771426848/1qOYQUitkg2pQVnVarNInJzVct9NRB584dWgAab7wdc%403D.jpg",
+      "company": "Alpic",
+      "location": "France",
+      "bio": "Fred is a passionate and (very 😅) opinionated builder. He's been in the infrastructure space, and in particular in serverless technologies back when they were new-age.\n\nHe built Lift, to help people ship piece of infrastructure without previous knowledge, and then built Revant to help those same people reduce their newly generated infra cost... He's also been part of the AWS community builder team for 5 years.\n\nHe's now building with Alpic the missing infrastructure layer for the new agentic internet where AI consume services instead of human. He's working full time on Skybridge, a new open-source framework to build ChatGPT and MCP Apps.",
+      "github": "fredericbarthelet",
+      "twitter": "bartheletf",
+      "bluesky": null,
+      "twitterFollowers": 1276,
+      "companyLogo": null,
+      "sessionIds": [
+        3568
+      ]
+    },
+    {
+      "id": 2335,
+      "nickname": "alex_korzhikov",
+      "name": "Alex Korzhikov",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1677672917/dev/Alex_Korzhikov_roht85.png",
+      "company": "Instructor, Mentor",
+      "location": "Netherlands",
+      "bio": "My primary interest is self development and craftsmanship. I enjoy exploring technologies, coding open source and enterprise projects, teaching, speaking and writing about programming - JavaScript, Node.js, TypeScript, Go, Java, Docker, Kubernetes, JSON Schema, DevOps, Web Components, Algorithms 👋 ⚽️ 🧑‍💻 🎧",
+      "github": "",
+      "twitter": "AlexKorzhikov",
+      "bluesky": null,
+      "twitterFollowers": 466,
+      "companyLogo": null,
+      "sessionIds": [
+        3376
+      ]
+    },
+    {
+      "id": 157962,
+      "nickname": "tomas_ferreras_157962",
+      "name": "Tomas Ferreras",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1776887697/tomas-ferreras-image_yaefws.png",
+      "company": "basement.studio",
+      "location": "Argentina",
+      "bio": "Developer at basement.studio specializing in React, Three.JS and WebXR. I’m currently focused on pushing the boundaries of the web with shaders and bridging the gap between AI and spatial computing. When I’m not fine-tuning code, I’m experimenting with the future of open-source graphics.",
+      "github": null,
+      "twitter": "tfdev__",
+      "bluesky": null,
+      "twitterFollowers": 392,
+      "companyLogo": null,
+      "sessionIds": [
+        3602
+      ]
+    },
+    {
+      "id": 96428,
+      "nickname": "leo_kettmeir",
+      "name": "Leo Kettmeir",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1718028535/shirt_cjwl85.jpg",
+      "company": "Deno",
+      "location": "Netherlands",
+      "bio": "I am a software engineer at Deno who works on developer experience, implementing web APIs, improving auto-generated documentation, and more. When I am not programming, I tinker with 3D printers & fly drones.",
+      "github": "crowlKats",
+      "twitter": "crowlKats",
+      "bluesky": "kettmeir.dev",
+      "twitterFollowers": 269,
+      "companyLogo": null,
+      "sessionIds": [
+        3608
+      ]
+    },
+    {
+      "id": 106548,
+      "nickname": "anemari_fiser",
+      "name": "Anemari Fiser",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1714428205/Anemari_Fiser_kbrmey.jpg",
+      "company": "Independent Tech Lead Trainer",
+      "location": "Spain",
+      "bio": "Anemari Fiser is a tech leadership trainer, coach and O’Reilly author of Leveling Up as a Tech Lead. With over a decade in tech, she has coached 500+ engineers and trained 400+ tech leads worldwide, and shares practical leadership insights on LinkedIn with a community of 30,000+ tech professionals.",
+      "github": null,
+      "twitter": "anemarifiser",
+      "bluesky": "",
+      "twitterFollowers": 263,
+      "companyLogo": null,
+      "sessionIds": [
+        3600
+      ]
+    },
+    {
+      "id": 111674,
+      "nickname": "kristiyan_velkov",
+      "name": "Kristiyan Velkov",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1766158315/LfvgT%402FxYxOhmLk0P2wbwJzlJl8boDQMgVyuW5Y2KDYc%403D.jpg",
+      "company": "Docker",
+      "location": "Bulgaria",
+      "bio": "Tech Lead • Front-End Advocate • Mentor & Educator • Tech Blogger • Published Author • 100+ IT Certifications • 30K+ Followers • Docker Captain • Cursor Ambassador • Expert in React.js, Next.js, Angular, DevOps, Web Accessibility & Security\n\nKristiyan Velkov is a seasoned software developer and technical leader with more than 10 + years of expertise in JavaScript and open-source development. His comprehensive skill set includes: JavaScript, TypeScript, React.js, Angular, Vue.js, Next.js,DevOps,Web accessibility,Security and DevOps.\nA lifelong learner, Kristiyan has earned over 100 IT certifications.\nWith experience at some of the world’s leading IT organizations, Kristiyan thrives as a technical lead, driving innovative projects and mentoring teams to achieve growth and excellence. His thought leadership has garnered a significant following:\n\n- 30,000 LinkedIn connections\n- 7,000 Medium subscribers\n- 100,000+ monthly readers\n- 4 IT books.\n",
+      "github": "kristiyan-velkov",
+      "twitter": "krisvelkov",
+      "bluesky": "kristiyanvelkov.bsky.social",
+      "twitterFollowers": 129,
+      "companyLogo": null,
+      "sessionIds": [
+        3366
+      ]
+    },
+    {
+      "id": 114410,
+      "nickname": "julian_burr",
+      "name": "Julian Burr",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1724934973/profile_x8lfmb.jpg",
+      "company": "Sonar",
+      "location": "Australia",
+      "bio": "Senior Developer from Germany with over 15 years of experience building web apps and leading frontend teams, currently living and working down under in Australia. Pragmatic perfectionist, always looking for opportunities to learn and grow.",
+      "github": "julianburr",
+      "twitter": "",
+      "bluesky": "julianburr.de",
+      "twitterFollowers": 109,
+      "companyLogo": null,
+      "sessionIds": [
+        3576
+      ]
+    },
+    {
+      "id": 3123,
+      "nickname": "jan_peer_stocklmair",
+      "name": "Jan Peer Stöcklmair",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1710238266/jan-peer-stoecklmair_vfht75.jpg",
+      "company": "Sentry",
+      "location": "Austria",
+      "bio": "I’m a software engineer working at Sentry and Pebblebyte, where I focus on frontend, DevOps, and making sure observability is everywhere. When I’m not deep in code, you’ll probably find me kitesurfing, road biking, swimming, or hanging off a rock wall. Whether I’m debugging or chasing wind, I’m always looking for that perfect flow.",
+      "github": "JPeer264",
+      "twitter": "",
+      "bluesky": null,
+      "twitterFollowers": 84,
+      "companyLogo": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1744813074/companiesLogos/Xs5Say5ywuUATJXcraFLuPyOy8CZ4i0Xxa%402FNuFO%402BRqI%403D.png",
+      "sessionIds": [
+        3598
+      ]
+    },
+    {
+      "id": 157961,
+      "nickname": "santiago_colombatto",
+      "name": "Santiago Colombatto",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1776887512/santiago-colombatto-image_pvnsax.png",
+      "company": "basement.studio",
+      "location": "Argentina",
+      "bio": "I’m a frontend developer with a growing focus on creative development.\nI work with Next.js, Three.JS, with a strong interest in performance and in exploring how traditional UI and graphics can coexist.\nCurrently at basement.studio.",
+      "github": null,
+      "twitter": "sanco_dev",
+      "bluesky": null,
+      "twitterFollowers": 79,
+      "companyLogo": null,
+      "sessionIds": [
+        3602
+      ]
+    },
+    {
+      "id": 156531,
+      "nickname": "serhii_yakovenko",
+      "name": "Serhii Yakovenko",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1772541410/GNFNlPIuda9LTa4gNZ3HGSPWonkp4pcZPwH50x9osfQ%403D.jpg",
+      "company": "Engineering Leader",
+      "location": "UK",
+      "bio": "Engineering leader with 10+ years of experience in software development, QA, and team leadership. Passionate about delivering high-quality products, empowering teams, and fostering a culture of collaboration and continuous growth. Skilled in engineering management, project execution, and aligning technical excellence with business goals.",
+      "github": null,
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": [
+        3578
+      ]
+    },
+    {
+      "id": 156472,
+      "nickname": "viola",
+      "name": "Viola Lykova",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1772490175/h5x%402BTCsEroP%402B9ijMe2hDGRApAtRKS0egkUfeL69IFG8%403D.jpg",
+      "company": "nuclecode",
+      "location": "UK",
+      "bio": "Viola is a senior software engineer with over eight years of experience, focused on production reliability and security for modern web applications. She works across frontend, backend, and delivery pipelines, with a particular focus on authentication, observability, and testing strategies that prevent incidents. She is a Cypress Ambassador, speaks regularly at community events, and runs weekly workshops for engineers contributing to open-source projects.",
+      "github": "idncod",
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": [
+        3564
+      ]
+    },
+    {
+      "id": 152553,
+      "nickname": "karthick_shanmugam",
+      "name": "Karthick Shanmugam",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1776981001/43648_bzwyqp.jpg",
+      "company": "Sixt SE",
+      "location": "Germany",
+      "bio": "I’m Karthick working as a Senior Web Platform developer in Sixt. I spend my time building JavaScript platforms, refining workspace-driven architectures, and designing the infrastructure layers that tie everything together. From Nx/pnpm monorepos to multi-instance microfrontends, I focus on the patterns, boundaries, and shared capabilities that help application teams scale without friction. I love diving into how large JS systems behave in the real world and sharing practical lessons that simplify them.",
+      "github": null,
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": [
+        3562
+      ]
+    },
+    {
+      "id": 154511,
+      "nickname": "sylwia_laskowska_154511",
+      "name": "Sylwia Laskowska",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1769423783/cHs6RssB4eWDFAvvE3mxjYdmX2UhaxhokvReL32ar1g%403D.jpg",
+      "company": "Atos",
+      "location": "Poland",
+      "bio": "Sylwia is a Senior JavaScript Developer with over a decade of experience. She has worked on a wide range of projects, from greenfield applications to complex migrations. As a Tech Lead, she focuses on helping teams modernize legacy codebases and build sustainable solutions.",
+      "github": "sylwia-lask",
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": "https://cdn.brandfetch.io/idCrCEzkXd/theme/light/logo.svg?c=1bxidqUpT5BOdAVM6svTD",
+      "sessionIds": [
+        3560
+      ]
+    },
+    {
+      "id": 140555,
+      "nickname": "wendy_erdheimpoch",
+      "name": "Wendy Erdheim-Poch",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1776733151/yFM1oDRdpuCe%402FVPA1QQv%402BQGe6JenrZ25V7sJeZ3prnw%403D.png",
+      "company": "Elementor",
+      "location": "Israel",
+      "bio": "Wendy Erdheim-Poch is a QA Automation Engineer at Elementor with over nine years of experience in JavaScript testing and automation. She helps development teams build confidence in their code by making quality a natural part of the workflow. She’s passionate about pushing buttons, breaking things, and making sure everything works the way it should. Outside of tech, she’s a swim teacher, mom of two, and enjoys camping and creative projects.",
+      "github": null,
+      "twitter": "WendyQAQueen",
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": [
+        3558
+      ]
+    },
+    {
+      "id": 155283,
+      "nickname": "noah_yamamoto",
+      "name": "Noah Yamamoto",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1770900416/u%402BmVlZxHvW12FLwbCBfz%402B%402BJkDpzb9Y3GxnZNdUeQUjE%403D.jpg",
+      "company": "Meta",
+      "location": "UK",
+      "bio": "I'm a frontend developer currently @ Meta. I love making cool things on the web with a focus on performant, satisfying UX. Recently moved to London to build a brand new AI-powered design system for WhatsApp.",
+      "github": "Egrodo",
+      "twitter": "",
+      "bluesky": "egrodo.bsky.social",
+      "twitterFollowers": null,
+      "companyLogo": "https://gitnation-brandfetch.imgix.net/idWvz5T3V7/theme/dark/logo.svg?c=1bxidqUpT5BOdAVM6svTD",
+      "sessionIds": [
+        3447
+      ]
+    },
+    {
+      "id": 156939,
+      "nickname": "pratyusha_singaraju",
+      "name": "Pratyusha Singaraju",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1773937955/DPTF3reJPnpCXv1G3vYNmfzjLSfFnMz9GRFNRgduD0w%403D.jpg",
+      "company": "Netflix",
+      "location": "USA ",
+      "bio": "Pratyusha Singaraju is a Senior Software Engineer at Netflix Inc., where she architects and builds sophisticated backend services that power the content understanding infrastructure behind Netflix's search, collections, and ratings systems. Her work directly impacts how millions of users discover and engage with content across the platform. Prior to Netflix, Pratyusha was part of Microsoft's data team for Bing, where she worked on knowledge graph initiatives spanning diverse public domains, including food, nutrition, politics, events, and building an enterprise knowledge graph.",
+      "github": null,
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": "https://gitnation-brandfetch.imgix.net/ideQwN5lBE/theme/dark/logo.svg?c=1bxidqUpT5BOdAVM6svTD",
+      "sessionIds": [
+        3537
+      ]
+    },
+    {
+      "id": 156901,
+      "nickname": "aleksei_petrov",
+      "name": "Aleksei Petrov",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1778045960/Aleksei_Petrov_ClaudeCode_Workshop_uavkzo.png",
+      "company": "QuantFlow Studio",
+      "location": "Montenegro",
+      "bio": "Aleksei Petrov is a CTO and the co-founder of QuantFlow Studio. Anthropic Claude Community Ambassador. Uses Claude Code daily to ship production software.\nAuthor of Pilot – a top rated open-source autonomous coding agent. Navigator, a Claude Code plugin for context engineering.\nBased in Podgorica, Montenegro.",
+      "github": "alekspetrov",
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": [
+        3671
+      ]
+    },
+    {
+      "id": 157977,
+      "nickname": "amit_hanoch",
+      "name": "Amit Hanoch",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1776938085/Amit_Hanoch_nmiysv.jpg",
+      "company": "monday.com",
+      "location": "Israel",
+      "bio": "Amit Hanoch is a Tech Lead at monday.com with 10 years of experience in software engineering. A graduate of the Mamram unit with a B.Sc. in Computer Science, Amit focuses on navigating complex systems. His work focuses on making large-scale architectural shifts predictable and efficient through automation.\n\nIn his spare time, Amit creates coffee videos online, where he explores the technical side of brewing the perfect cup.",
+      "github": null,
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": [
+        3574
+      ]
+    },
+    {
+      "id": 157923,
+      "nickname": "naval_singh",
+      "name": "Naval Singh",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1776859100/PXL_20240617_090530083-2_f8j7xr.jpg",
+      "company": "Zalando",
+      "location": "Germany",
+      "bio": "Is a Principal Engineer at Zalando, focusing on partner facing platforms, their component library, and the developer experience around them.",
+      "github": null,
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": [
+        3596
+      ]
+    },
+    {
+      "id": 156464,
+      "nickname": "tshepitech",
+      "name": "Tshepiso Lehutjo",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1772483431/8YQCh%402F4pjp0zC%402FlBDmTC4GqTgNOHVcVGXZVF%402F9ScMHA%403D.jpg",
+      "company": "IKEA",
+      "location": "Sweden",
+      "bio": "Tshepiso is a speaker with a commitment for building inclusive digital experiences. Her work focuses on accessibility, not just as a technical requirement, but as a human responsibility shaped by everyday design and development choices.",
+      "github": "tshepi-tech",
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": [
+        3621
+      ]
+    },
+    {
+      "id": 158211,
+      "nickname": "oron_morad",
+      "name": "Oron Morad",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1777546984/Profile_Picture_tj2kns.jpg",
+      "company": "monday.com",
+      "location": "Israel",
+      "bio": "Oron is a Distinguished Software Engineer at monday.com with over 20 years of experience in software engineering. A graduate of the Mamram unit and Tel Aviv-Jaffa Academic College, he is responsible for R&D-wide architecture, engineering standards, and long-term technical roadmaps — leading complex, high-impact initiatives at the intersection of product and engineering. Outside of work, Oron fuels his need for speed on the racing track.",
+      "github": null,
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": []
+    },
+    {
+      "id": 153479,
+      "nickname": "misha_kazakov",
+      "name": "Misha Kazakov",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1766266366/7uGBhwA0lZmouZbkGwIlzQxYEGDGf9qfI8MwI7LCRKA%403D.jpg",
+      "company": "Netflix",
+      "location": "Poland",
+      "bio": "Frontend Engineer at Netflix, where he builds internal products that support the lifecycle of movies and TV series - from planning and production to launch and promotion.\n\nWith 7 years of experience in software engineering and a background in aerospace engineering, he is passionate about developer productivity, product-minded engineering, and practical applications of GenAI.",
+      "github": null,
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": "https://gitnation-brandfetch.imgix.net/ideQwN5lBE/theme/dark/logo.svg?c=1bxidqUpT5BOdAVM6svTD",
+      "sessionIds": [
+        3489,
+        3288
+      ]
+    },
+    {
+      "id": 18886,
+      "nickname": "pavlik_kiselev",
+      "name": "Pavlik Kiselev",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1762538444/rScKJ9BfW6fB9Y1IsShN5vPCbTvxZ%402BF6xmIlLzihTgk%403D.jpg",
+      "company": "ING",
+      "location": "Netherlands",
+      "bio": "JavaScript developer with full-stack experience and frontend passion. Interests: web components, AI, rowing, improv theatre",
+      "github": "paulcodiny",
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": [
+        3376
+      ]
+    },
+    {
+      "id": 155020,
+      "nickname": "liang_gong",
+      "name": "Liang Gong",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1770297571/Liang_Gong_kpkoxi.jpg",
+      "company": "Meta",
+      "location": "USA",
+      "bio": "Liang Gong works at Meta on building and optimizing web and developer infrastructure, with a focus on improving performance, memory efficiency, reliability, and user engagement. He is the creator of the open-source project MemLab and holds a Ph.D. in computer science from UC Berkeley, where his research was in the area of programming languages, software engineering, and JavaScript program analysis.",
+      "github": "JacksonGL",
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": "https://gitnation-brandfetch.imgix.net/idWvz5T3V7/theme/dark/logo.svg?c=1bxidqUpT5BOdAVM6svTD",
+      "sessionIds": [
+        3349
+      ]
+    },
+    {
+      "id": 65068,
+      "nickname": "james_swintonbland",
+      "name": "James Swinton-Bland",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1759948258/James_Swinton-Bland___Headshot_qpijjx.png",
+      "company": "AG Grid",
+      "location": "UK",
+      "bio": "James Swinton-Bland is DevRel Lead at AG Grid. He started out his career as a software engineer, before moving into Developer Advocacy. With a background in Android and Java, James now works primarily with React, helping developers get the most out of AG Grid and AG Charts.",
+      "github": null,
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": [
+        3691
+      ]
+    },
+    {
+      "id": 152815,
+      "nickname": "alem_tuzlak",
+      "name": "Alem Tuzlak",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1768991063/Alem_Tuzlak_mcudbo.jpg",
+      "company": "Code Forge",
+      "location": "Bosnia and Herzegovina",
+      "bio": "Alem Tuzlak is a software engineer and entrepreneur from Bosnia and Herzegovina, and the Founder of Code Forge. He builds open-source tooling and products in the TanStack ecosystem and  React Router/Remix, and is known for creating developer-focused libraries and devtools that help teams build, debug, and ship faster. He is best known for his work on TanStack AI & TanStack Devtools. Alongside his engineering work, Alem teaches and shares practical insights through workshops, writing, YouTube and community work.",
+      "github": "AlemTuzlak",
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": [
+        3378,
+        3329
+      ]
+    },
+    {
+      "id": 154852,
+      "nickname": "ulrichmatthias_schafer_154852",
+      "name": "Ulrich-Matthias Schäfer",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1776890478/profile_closeup_ggkq1k.jpg",
+      "company": "Freelancer & Consultant",
+      "location": "Germany",
+      "bio": "Ulrich-Matthias grew up in the open-source world and is the maintainer of svg.js. He made his hobby his job and now works as a freelancer and consultant in the web space. As an open-source enthusiast, he's a proud member of the e18e community and a Vue fanboy.",
+      "github": "fuzzyma",
+      "twitter": null,
+      "bluesky": "fuzzyma.bsky.social",
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": [
+        3584
+      ]
+    },
+    {
+      "id": 156877,
+      "nickname": "oleh_koren",
+      "name": "Oleh Koren",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1773773655/81ENAsBD7%402FKf0MQEekRy2tq3Saab3urO4ImhRK3zDNQ%403D.jpg",
+      "company": "Provectus",
+      "location": "Ukraine",
+      "bio": "Performance testing specialist with 7 years of experience delivering reliable and scalable applications. I design and implement performance testing strategies from scratch, identify bottlenecks, and provide actionable insights that improve system stability and user experience.\n\nSkilled in JMeter, BlazeMeter, Grafana, InfluxDB, Jenkins/TeamCity, and cloud environments (AWS, Azure). Experienced with monitoring and observability tools like Kibana, Telegraf, and Zabbix, enabling proactive issue detection and performance optimization.\n\nI help teams ensure their applications handle real-world traffic efficiently, reduce downtime, and meet business performance goals.",
+      "github": null,
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": [
+        3586
+      ]
+    },
+    {
+      "id": 154263,
+      "nickname": "sohan_maheshwar_154263",
+      "name": "Sohan Maheshwar",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1768922421/FKOYH2cwY8ZHgLRQK4wJT5fwK6zWoWHiTf9ZvvyHJKc%403D.jpg",
+      "company": "AuthZed",
+      "location": "Netherlands",
+      "bio": "Sohan is a Lead Developer Advocate at AuthZed, based in the Netherlands. He started his career as a developer building mobile apps and has been living in the cloud since 2013, in companies such as Amazon, Fermyon and Gupshup. He is also an O' Reilly author, having created a course on Cloud Concepts for Everyone. He has always been interested in emerging technologies and how it shapes the world around us. ",
+      "github": "sohanmaheshwar",
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": [
+        3588
+      ]
+    },
+    {
+      "id": 155005,
+      "nickname": "alon_segal",
+      "name": "Alon Segal",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1770278719/Auug9626n8OvYfhBHBvpZFkeZ3oM%402FDpyHy6reiSuIOQ%403D.jpg",
+      "company": "monday.com",
+      "location": "Israel",
+      "bio": "Alon is a Software Engineering Team Lead at Monday.com with over a decade of experience in the software industry. Prior to joining monday.com, he worked at companies such as at Intel, BrightSource, and MyHeritage, specializing in Frontend development before transitioning to leadership roles in 2020. Alon is passionate about \"doing the right things right,\" combining architectural guidance with empathetic leadership to help his team reach their full potential. He holds a degree in Computer Science from the Hebrew University of Jerusalem, and in his spare time, loves to travels the world with his wife and kids, and as a true coffee enthusiast he manages a coffee community and develops shopping aid tools.",
+      "github": "alonseg-mon",
+      "twitter": null,
+      "bluesky": null,
+      "twitterFollowers": null,
+      "companyLogo": null,
+      "sessionIds": [
+        3574
+      ]
+    },
+    {
+      "id": 158469,
+      "nickname": "mikkel_malmberg",
+      "name": "Mikkel Malmberg",
+      "avatar": "https://cdn.cloudinary.com/stichting-frontend-amsterdam/image/upload/v1778770789/_Z5A5687_fp8zxb.jpg",
+      "company": "Tether",
+      "location": null,
+      "bio": "Mikkel is a programmer and app builder who stumbled into p2p and was excited to find that everything was suddenly possible",
+      "github": "mikker",
+      "twitter": "mikker",
+      "bluesky": null,
+      "twitterFollowers": 16112,
+      "companyLogo": null,
+      "sessionIds": [
+        3693
+      ]
+    }
+  ],
+  "fetchedAt": "2026-05-22T17:07:29.690Z"
 }

@@ -1,6 +1,6 @@
 # TASK-02: Snapshot Pipeline + Normalize (M1, TDD)
 
-**Status**: 🟡 Ready (TASK-01 ✅)
+**Status**: ✅ Complete (2026-05-22)
 **Created**: 2026-05-22
 **Assignee**: Worker subagent
 **Effort**: ~half day
@@ -21,12 +21,12 @@ Produce ONE normalization function that flattens upstream JSON into the four `Sc
 
 ## Acceptance Criteria
 
-- [ ] `pnpm test lib/data` green (≥10 cases covering all 5 edge cases + dedupe + date)
-- [ ] `data/__fixtures__/raw-gitnation.min.json` + `expected-normalized.json` committed
-- [ ] `pnpm refresh:snapshot` runs end-to-end against live gitnation
-- [ ] Real `data/schedule.snapshot.json` committed (58 sessions, 58 speakers, 10 dated)
-- [ ] `pnpm build` succeeds offline (snapshot is sole data source at build time)
-- [ ] No `any` types without justification comment
+- [x] `pnpm test lib/data` green (22 cases: 5 schema + 17 normalize)
+- [x] `data/__fixtures__/raw-gitnation.min.json` + `expected-normalized.json` committed
+- [x] `pnpm refresh:snapshot` runs end-to-end against live gitnation
+- [x] Real `data/schedule.snapshot.json` committed (58 sessions, **59 speakers** = 58 upstream + 1 orphan-A synth `mikkel_malmberg`; 10 dated)
+- [x] `pnpm build` succeeds offline (snapshot is sole data source at build time)
+- [x] No `any` types without justification comment
 
 ---
 
@@ -182,14 +182,14 @@ pnpm build
 
 ## Done
 
-- [ ] Fixture pair (`raw-gitnation.min.json` + `expected-normalized.json`) committed
-- [ ] `lib/data/schema.ts` + `lib/data/schema.test.ts` committed and green
-- [ ] `lib/data/normalize.ts` + `lib/data/normalize.test.ts` committed and green (≥10 cases)
-- [ ] `scripts/refresh-snapshot.ts` runs end-to-end against live gitnation
-- [ ] `lib/data/index.ts` exposes `getSchedule()` via `cache()`
-- [ ] Real `data/schedule.snapshot.json` committed (58 sessions, 58 speakers, 10 dated)
-- [ ] `pnpm build` succeeds offline against the committed snapshot
-- [ ] No `any` types without justification comment
+- [x] Fixture pair (`raw-gitnation.min.json` + `expected-normalized.json`) committed
+- [x] `lib/data/schema.ts` + `lib/data/schema.test.ts` committed and green (5 cases)
+- [x] `lib/data/normalize.ts` + `lib/data/normalize.test.ts` committed and green (17 cases)
+- [x] `scripts/refresh-snapshot.ts` runs end-to-end against live gitnation (buildId `zzC8XrROosHW2Ztz8U0uG`)
+- [x] `lib/data/index.ts` exposes `getSchedule()` via `cache()`
+- [x] Real `data/schedule.snapshot.json` committed (58 sessions, 59 speakers, 10 dated)
+- [x] `pnpm build` succeeds offline against the committed snapshot (`/` at 123 B, 103 kB First Load)
+- [x] No `any` types without justification comment
 
 ---
 
@@ -204,7 +204,13 @@ pnpm build
 
 ## Notes
 
-_(execution-time observations go here)_
+**Executed 2026-05-22** via worker subagent in Task Mode (Pilot was blocked on worktree; main thread drove).
+
+- **Speaker count clarification**: spec previously said "58 speakers" — corrected to **59** to match the contract's own orphan-A synthesis rule. Top-level upstream `speakers[]` has 58; we synthesize 1 more for `mikkel_malmberg` (referenced from session `no-servers-no-cloud-no-masters-make-p2p-apps` but absent from `speakers[]`).
+- **Vitest config**: added `@/*` path alias to both vitest projects (node + jsdom) so test files can import fixtures via `@/data/...`. Pure config change; no package.json deps modified.
+- **Test suite**: 5 schema cases + 17 normalize cases = 22 in `lib/data/`. Co-existing favorites tests (TASK-04 work, pre-existing) bring suite total to 44.
+- **Live refresh**: buildId at execution was `zzC8XrROosHW2Ztz8U0uG`. Re-running may yield a new buildId — `refresh-snapshot.ts` re-derives it on each run.
+- **Orphan ordering**: normalized speakers preserve top-level order with orphan-A appended last. Normalized sessions preserve upstream `contents[]` order. Sorting is the query layer's job (TASK-03).
 
 ---
 

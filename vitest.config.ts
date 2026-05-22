@@ -1,9 +1,16 @@
+import path from 'node:path';
 import { defineConfig } from 'vitest/config';
 
+const alias = {
+  '@': path.resolve(__dirname, '.'),
+};
+
 export default defineConfig({
+  resolve: { alias },
   test: {
     projects: [
       {
+        resolve: { alias },
         test: {
           name: 'node',
           environment: 'node',
@@ -11,10 +18,12 @@ export default defineConfig({
             'lib/data/**/*.test.ts',
             'lib/queries/**/*.test.ts',
             'lib/banner/**/*.test.ts',
+            'lib/favorites/**/*.ssr.test.ts',
           ],
         },
       },
       {
+        resolve: { alias },
         test: {
           name: 'jsdom',
           environment: 'jsdom',
