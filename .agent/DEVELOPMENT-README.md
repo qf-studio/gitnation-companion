@@ -52,9 +52,9 @@ Data normalization, query functions, banner state reducer, favorites store. TASK
 
 | Task | Title | State | Mode | Prereqs | Effort |
 |---|---|---|---|---|---|
-| [TASK-02](./tasks/TASK-02-snapshot-pipeline-normalize.md) | Snapshot pipeline + normalize (M1) | 🟡 Ready | Worker | TASK-01 ✅ | ~½ day |
-| [TASK-03](./tasks/TASK-03-query-layer-banner-state.md) | Query layer + banner state (M2) | ⬜ Blocked | Worker | TASK-02 | ~½ day |
-| [TASK-04](./tasks/TASK-04-favorites-store.md) | Favorites store (M3) | 🟡 Ready | Worker | TASK-01 ✅ | ~1 hr |
+| [TASK-02](./tasks/TASK-02-snapshot-pipeline-normalize.md) | Snapshot pipeline + normalize (M1) | ✅ Done | Worker | TASK-01 ✅ | ~½ day |
+| [TASK-03](./tasks/TASK-03-query-layer-banner-state.md) | Query layer + banner state (M2) | ✅ Done | Worker | TASK-02 ✅ | ~½ day |
+| [TASK-04](./tasks/TASK-04-favorites-store.md) | Favorites store (M3) | ✅ Done | Worker | TASK-01 ✅ | ~1 hr |
 
 #### 🎨 UI — RSC pages + 3 client islands
 
@@ -62,9 +62,9 @@ App shell, schedule, detail / speaker / search / favorites pages, Happening Now 
 
 | Task | Title | State | Mode | Prereqs | Effort |
 |---|---|---|---|---|---|
-| [TASK-05](./tasks/TASK-05-schedule-page-app-shell.md) | Schedule page + app shell (M4) | ⬜ Blocked | Main | TASK-02, TASK-03 | ~½ day |
-| [TASK-06](./tasks/TASK-06-detail-speaker-search-favorites-pages.md) | Detail / Speaker / Search / Favorites (M5) | ⬜ Blocked | Main | TASK-04, TASK-05 | ~1 day |
-| [TASK-07](./tasks/TASK-07-happening-now-banner.md) | Happening Now banner client island (M6) | ⬜ Blocked | Main | TASK-03, TASK-05 | ~1 hr |
+| [TASK-05](./tasks/TASK-05-schedule-page-app-shell.md) | Schedule page + app shell (M4) | 🟡 Ready | Main | TASK-02 ✅, TASK-03 ✅ | ~½ day |
+| [TASK-06](./tasks/TASK-06-detail-speaker-search-favorites-pages.md) | Detail / Speaker / Search / Favorites (M5) | ⏸️ Blocked | Main | TASK-04 ✅, TASK-05 | ~1 day |
+| [TASK-07](./tasks/TASK-07-happening-now-banner.md) | Happening Now banner client island (M6) | ⏸️ Blocked | Main | TASK-03 ✅, TASK-05 | ~1 hr |
 
 #### ✅ Verification — single gate before deploy
 
