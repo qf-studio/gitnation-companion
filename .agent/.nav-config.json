@@ -15,5 +15,8 @@
   "read_guard_hook": {
     "strict_block": false,
     "escalate_threshold": 50
+  },
+  "loop_mode": {
+    "enabled": true
   }
 }

@@ -127,11 +127,12 @@ App shell, schedule, detail / speaker / search / favorites pages, Happening Now 
 ├── sops/                             ← Standard Operating Procedures
 │   ├── integrations/                 # Third-party service guides
 │   ├── debugging/                    # Known issues and fixes
+│   │   └── pilot-retry-loop-and-oom.md  ← Pilot worker loops on re-opened issues; OOM mitigations
 │   ├── development/                  # Dev workflows
 │   └── deployment/                   # Vercel deployment procedures
 │
 └── .context-markers/                 ← Compact restore points
-    └── before-compact-2026-05-22-1852-design-handoff-applied.md  ← .active (logic layer done since)
+    └── before-compact-2026-05-22-1952-task-05-shipped.md  ← .active
 ```
 
 ---
@@ -209,5 +210,5 @@ Target session budget: ~12k tokens vs ~150k loading everything.
 
 ---
 
-**Last Updated**: 2026-05-22 (post-TASK-05 — app shell + Schedule live; TASK-06 & TASK-07 parallel-ready)
+**Last Updated**: 2026-05-22 (post-TASK-05 + Pilot smoke-test wrap; first debugging SOP filed)
 **Powered By**: Navigator v6.15.4
