@@ -1,6 +1,6 @@
 # TASK-04: Favorites Store (M3, TDD, jsdom)
 
-**Status**: ⏸️ Blocked on TASK-01
+**Status**: ✅ Complete (2026-05-22, commit 7c64a26)
 **Created**: 2026-05-22
 **Assignee**: Worker subagent
 **Effort**: ~1h
