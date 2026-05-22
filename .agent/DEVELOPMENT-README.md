@@ -10,9 +10,10 @@
 
 ### New to This Project?
 **Read in this order:**
-1. [Design Brief](./system/design-brief.md) — Canonical product doc: users, JTBDs, flows, screens, principles, open questions
-2. [Project Architecture](./system/project-architecture.md) — Directory layout, data flow, runtime, quality gates
-3. [Tech Stack Patterns](./system/tech-stack-patterns.md) — Next 15 / React 19 / Tailwind v4 / Vitest / Playwright / pnpm 11 conventions and traps
+1. [Design Brief](./system/design-brief.md) — Product intent: users, JTBDs, flows, principles, open questions (visual/IA sections superseded — see #2)
+2. [Design Handoff 2026-05-22](./system/design-handoff-2026-05-22.md) — **Authoritative for tokens, IA (4 tabs), banner states (2), component specs, screen layouts**
+3. [Project Architecture](./system/project-architecture.md) — Directory layout, data flow, runtime, quality gates
+4. [Tech Stack Patterns](./system/tech-stack-patterns.md) — Next 15 / React 19 / Tailwind v4 / Vitest / Playwright / pnpm 11 conventions and traps
 
 ### Starting a New Feature?
 1. Check if similar task exists in [`tasks/`](./tasks/)

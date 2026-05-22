@@ -1,9 +1,24 @@
 # Design Brief — GitNation Conference Companion (JSNation 2026)
 
-**Status**: Draft v1
+**Status**: v1 + 2026-05-22 design handoff applied
 **Date**: 2026-05-22
 **Owner**: Aleks Petrov
 **Scope**: Mobile-first web app for JSNation 2026 attendees, deployed as a static-first Next.js site.
+
+> **2026-05-22 — Design handoff applied.** A Claude Design HTML/CSS handoff has been imported and locked. **§6 (IA), §7 (Screen Specs), §9 (Visual Direction) are superseded by `system/design-handoff-2026-05-22.md`** — that document is authoritative for tokens, IA, and component specs. The remainder of this brief (§1–§5 context/JTBDs/flows, §8 principles, §10 out-of-scope, §11 open questions, §12–§13 metrics/acceptance) **remains authoritative** for product intent.
+>
+> §11 open questions are now all locked. See design-handoff §1 for the resolution table. Headline shifts:
+> - **4 tabs**, not 3 (Speakers promoted from v2)
+> - Banner: **2 active states + hidden** (not 5)
+> - Banner is **app-root**, not Schedule-only
+> - Card badge: **KindChip** (Talk / Keynote / Workshop), not Remote/InPerson
+> - Card left edge: **3px track-color stripe**, not format dot
+> - Card tags moved to Session Detail
+> - Brand yellow: `#FBCB0A` (not `#FFD300`)
+> - Backgrounds: `#0B0F14` / `#14181E` (cool grey-blue, not pure near-black)
+> - Live indicator: **red `#FF4D4D`**, not yellow
+> - Favorite icon: **★ star**, not ♥ heart
+> - **Light mode is in scope** for v1 via `prefers-color-scheme`
 
 ---
 

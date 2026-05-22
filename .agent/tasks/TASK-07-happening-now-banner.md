@@ -12,20 +12,30 @@
 ## Context
 
 **Problem**:
-The state machine `computeBannerState(now, schedule)` is already test-locked in TASK-03, but there is no UI surface that renders its output. The layout slot from TASK-05 currently holds a placeholder.
+The state machine `computeBannerState(now, schedule)` is already test-locked in TASK-03 (now 2 active states + hidden), but there is no UI surface that renders its output. The mount point from TASK-05 lives in `app/layout.tsx` and currently holds a placeholder.
 
 **Goal**:
-Ship the render shell: a client component that ticks `now` every 30s and renders one of five microcopy variants. No logic here — only presentation.
+Ship the render shell: a client component that ticks `now` every 30s, renders one of **two active microcopy variants** (or `null`), and is fixed-positioned at the top of the viewport above all routes. No logic here — only presentation.
+
+> **Design-handoff update (2026-05-22)**: Banner is now **app-root** (visible on every route), **2 active states** (`live` / `upcoming`), **fixed-position** below the safe-area inset (NOT sticky in scroll), background always `#0F141E`, live indicator is **red `#FF4D4D`** (not yellow). See `system/design-handoff-2026-05-22.md` §4.2.
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] `HappeningNowBanner.test.tsx` green for all 5 cases
-- [ ] Mounted at the top of `app/page.tsx` (Schedule only, per brief §7.6) — NOT in `app/layout.tsx`
+- [ ] `HappeningNowBanner.test.tsx` green for 3 cases: `live`, `upcoming`, `hidden`
+- [ ] Mounted at app-root in `app/layout.tsx` (visible on every route per design handoff §4.2) — NOT in `app/page.tsx`
+- [ ] Position: `fixed; top: env(safe-area-inset-top, 0); left: 0; right: 0; z-index: 40`. Does NOT scroll with content.
+- [ ] On state change, banner updates `--banner-pad` CSS var (50px hidden, 96px visible) on the `<main>` element to prevent content overlap
+- [ ] Background `#0F141E` for both active states (token `--banner-bg`)
+- [ ] LIVE state: red `#FF4D4D` LiveDot + 1.4s beacon ring + "LIVE" label in red
+- [ ] UPCOMING state: "UP NEXT" label in `--brand-on-surface` color, no beacon
+- [ ] Two-line layout: line 1 = title (13/600 white), line 2 = `room · "ends in Xm" / "starts in Xm"` (11.5/500 rgba(255,255,255,0.6))
+- [ ] ChevronRight indicator on right edge (rgba(255,255,255,0.5))
+- [ ] Tap → routes to `/sessions/<slug>` of the active/upcoming session
 - [ ] `?now=ISO_STRING` query param overrides the ticking clock in dev builds; ignored in production
 - [ ] Manual check during `pnpm dev`: visible banner with correct copy based on current `Date`
-- [ ] No re-fetch / re-parse of schedule on client (passed as prop)
+- [ ] Client receives serialized minimal session list `{ id, slug, title, startsAt, endsAt, room }[]`, not full Schedule (bundle minimization per design-handoff §6)
 - [ ] `pnpm lint` clean
 
 ---
@@ -34,38 +44,42 @@ Ship the render shell: a client component that ticks `now` every 30s and renders
 
 ### Phase 1: Component
 
-**Goal**: Build the client-island banner that ticks every 30s and renders the 5 state variants.
+**Goal**: Build the client-island banner that ticks every 30s and renders 2 active state variants (or `null`). Visual spec from design handoff §4.2.
 
 **Tasks**:
 - [ ] Mark file `'use client'`.
-- [ ] Accept prop `schedule: Schedule` (serializable from server parent).
-- [ ] Initialize `now: Date` state with `new Date()`.
-- [ ] Add `useEffect` with `setInterval(() => setNow(new Date()), 30_000)` and cleanup on unmount.
-- [ ] Compute `state = computeBannerState(now, schedule)`.
-- [ ] Render switch on `state.kind`:
-  - **`LIVE`**: `🔴 Happening now: <Link>{state.session.title}</Link>` → `/sessions/<slug>`.
-  - **`IMMINENT`**: `Starts in {state.minutesUntil} min: <Link>{state.session.title}</Link>` → `/sessions/<slug>`.
-  - **`TODAY`**: `Today at the conference` → `<Link>` to `/`.
-  - **`EVENT_SOON`**: `JSNation in {state.daysUntil} days`.
-  - **`HIDDEN`**: returns `null`.
-- [ ] Add 2s "breathing pulse" CSS keyframe on the red dot when `LIVE` (in `globals.css`).
+- [ ] Accept props `sessions: MinimalSession[]` (serialized, minimal fields only) and optional `now?: Date` (dev override from `?now=ISO`).
+- [ ] Initialize `now: Date` state with `props.now ?? new Date()`.
+- [ ] If no `props.now`: add `useEffect` with `setInterval(() => setNow(new Date()), 30_000)` and cleanup on unmount.
+- [ ] Compute `state = computeBannerState(now, { sessions })` (TASK-03 reducer; pass the minimal projection).
+- [ ] In a separate `useEffect` keyed on `state.kind`, set `document.documentElement.style.setProperty('--banner-pad', state.kind === 'hidden' ? '50px' : '96px')`. This drives the `<main>` content padding without React-re-rendering the layout.
+- [ ] Render layout (see handoff §4.2 — single `<button>` element):
+  - Container: `position: fixed; top: env(safe-area-inset-top, 0); left:0; right:0; z-index:40; background: var(--banner-bg); padding: 8px 14px; display: flex; align-items: center; gap: 10px`.
+  - Returns `null` when `state.kind === 'hidden'`.
+  - **`live`**: badge slot = `<LiveDot/>` + `<span style="color:#FF4D4D; font-size:10.5px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase">LIVE</span>`. Two-line text slot: title (13/600 white, ellipsis) / `{room} · ends in {minutesRemaining}m` (11.5/500 rgba(255,255,255,0.6)).
+  - **`upcoming`**: badge slot = `<span style="color:var(--brand-on-surface); font-size:10.5px; font-weight:800; letter-spacing:0.6px; text-transform:uppercase">UP NEXT</span>`. Two-line text slot: title / `{room} · starts in {fmtCountdown(minutesUntil)}` (uses `{N}m` for <60min, `{H}h {M}m` for ≥60min).
+  - ChevronRight icon on far right (rgba(255,255,255,0.5)).
+- [ ] Wrap container in a `<Link href={`/sessions/${state.session.slug}`}>` (or use `useRouter().push()` on click; pick Link for SSR-friendliness).
+- [ ] Add the LiveDot 1.4s beacon keyframe in `app/globals.css` if not already added by TASK-05.
 
 **Files**:
 - `components/client/HappeningNowBanner.tsx` — client island component
-- `app/globals.css` — pulse keyframe
+- `lib/banner/serialize.ts` — helper `toMinimalSessions(schedule): MinimalSession[]` to keep the serialized payload small
+- `app/globals.css` — LiveDot beacon keyframe (if not already present)
 
-### Phase 2: Mount (Schedule route only)
+### Phase 2: Mount (app-root, every route)
 
-**Goal**: Wire the banner into the **Schedule page** (`app/page.tsx`) — NOT the global layout — per design brief §7.6 ("lives at the top of the Schedule screen only").
+**Goal**: Wire the banner into the **global layout** (`app/layout.tsx`) — per design handoff §4.2 (banner is visible on every route, not Schedule-only).
 
 **Tasks**:
-- [ ] Mount `<HappeningNowBanner schedule={getSchedule()} />` at the top of `app/page.tsx` (Schedule), above the event header.
-- [ ] Remove or leave unused the `<HappeningNowBannerSlot />` placeholder in `app/layout.tsx` from TASK-05 (the banner does NOT render on detail / speaker / search / favorites routes).
-- [ ] Confirm the server passes the schedule down as a prop (no client re-fetch).
+- [ ] Replace the TASK-05 placeholder in `app/layout.tsx` with `<HappeningNowBanner sessions={toMinimalSessions(getSchedule())} />`.
+- [ ] Confirm `<main>` has `padding-top: var(--banner-pad, 50px)` — banner updates this CSS var via DOM imperative call to avoid re-rendering the layout subtree.
+- [ ] Confirm the server passes the serialized minimal-session list down as a prop (no client re-fetch).
+- [ ] Smoke-check: open `/sessions/<slug>` in dev — banner is still present at top.
 
 **Files**:
-- `app/page.tsx` — mount banner at top, pass schedule prop
-- `app/layout.tsx` — verify banner slot is removed/absent
+- `app/layout.tsx` — banner mount at app root
+- `app/page.tsx` — confirm NO banner mount here (lives in layout)
 
 ### Phase 2.5: `?now=` dev override (workshop-demo enabler)
 
@@ -73,29 +87,27 @@ Ship the render shell: a client component that ticks `now` every 30s and renders
 
 **Tasks**:
 - [ ] Accept an optional `now` prop on `HappeningNowBanner` (typed `Date | undefined`).
-- [ ] In `app/page.tsx`, read `searchParams.now` (Schedule is a server component, so this is free).
-- [ ] If `process.env.NODE_ENV !== 'production'` AND `searchParams.now` is a valid ISO string, pass `new Date(searchParams.now)` to the banner; otherwise omit the prop and let the client component use its own ticking `new Date()`.
-- [ ] Document in `## Notes`: example URL `http://localhost:3000/?now=2026-05-22T13:45:00Z` to demo IMMINENT during the workshop.
+- [ ] In `app/layout.tsx` (server component), read `searchParams.now` via the route's segment-level access (Next 15 layouts don't receive `searchParams` directly — use `headers()` to read `referer`, or move the read into `app/page.tsx` which passes it via a context). Recommended approach: keep `app/layout.tsx` reading the schedule, and have a server child component re-pass `searchParams.now` via React context to the client banner. **Simpler alternative**: client-side, `useSearchParams().get('now')` inside the banner client island itself, gated by `process.env.NODE_ENV`.
+- [ ] If `process.env.NODE_ENV !== 'production'` AND `searchParams.now` is a valid ISO string, use `new Date(searchParams.now)` as the starting `now`; otherwise tick normally.
+- [ ] Document in `## Notes`: example URL `http://localhost:3000/?now=2026-05-22T13:45:00Z` to demo `upcoming`, `http://localhost:3000/?now=2026-06-13T11:00:00Z` to demo `live`.
 
 **Files**:
-- `app/page.tsx` — read `searchParams.now`, gate by `NODE_ENV`
-- `components/client/HappeningNowBanner.tsx` — accept optional `now: Date` prop
+- `components/client/HappeningNowBanner.tsx` — read `useSearchParams().get('now')` (dev-only), gate by NODE_ENV
 
 ### Phase 3: Component tests
 
-**Goal**: Lock the 5 render variants under frozen time.
+**Goal**: Lock the 3 render variants (2 active + hidden) under frozen time.
 
 **Tasks**:
 - [ ] Set up jsdom with `vi.useFakeTimers()`.
-- [ ] **LIVE**: assert red-dot SVG present + session title rendered.
-- [ ] **IMMINENT**: assert "Starts in N min" copy.
-- [ ] **TODAY**: assert "Today at the conference" copy.
-- [ ] **EVENT_SOON**: assert "JSNation in N days" copy.
-- [ ] **HIDDEN**: assert component renders nothing (`container.firstChild === null`).
-- [ ] Use a small inline `schedule` fixture (3 sessions: one past, one in 30 min, one in 6 hours, event start in 5 days).
+- [ ] **`live`**: assert LIVE label (red), title rendered, room rendered, "ends in Nm" copy present.
+- [ ] **`upcoming`**: assert "UP NEXT" label (brand color), title rendered, "starts in Nm" or "starts in Hh Mm" copy.
+- [ ] **`hidden`**: assert component renders nothing (`container.firstChild === null`).
+- [ ] Use a small inline `sessions` fixture (3 minimal-session entries: one past, one currently live, one starting in 90 min).
+- [ ] Bonus: assert `document.documentElement.style.getPropertyValue('--banner-pad')` flips correctly across the three states (50px → 96px → 50px).
 
 **Files**:
-- `components/client/HappeningNowBanner.test.tsx` — 5-case render test
+- `components/client/HappeningNowBanner.test.tsx` — 3-case render test
 
 ---
 
@@ -110,11 +122,18 @@ Ship the render shell: a client component that ticks `now` every 30s and renders
 
 | Decision | Options Considered | Chosen | Reasoning |
 |---|---|---|---|
+| Mount location | Schedule only (`app/page.tsx`, brief), app-root (`app/layout.tsx`, design) | **app-root** | Per design handoff §1; live indicator follows the user across screens |
+| State count | 5 (brief), 2 (design), 3 (compromise) | **2 active + hidden** | Per locked decision 2026-05-22 |
+| Banner positioning | Sticky in scroll (brief), fixed below safe-area (design) | **Fixed** | Per design handoff §4.2; banner must not scroll away |
+| Content padding | Static reservation, dynamic via CSS var | **Dynamic via `--banner-pad`** | 50px reserved when hidden (no layout shift); 96px when visible. Banner updates the var imperatively to avoid re-rendering layout |
+| Live indicator color | Yellow (brief accent), red (design) | **Red `#FF4D4D`** | Per design handoff §3.4. Red signals urgency better than the brand yellow |
+| Banner background | Yellow accent bar (brief), near-black `#0F141E` (design) | **`#0F141E`** | Per design handoff §3.4. Yellow on the dot, not the whole bar — keeps the chrome calm |
 | Tick interval | 15s, 30s, 60s | 30s | State boundaries are at-minute granularity; 30s gives ≤30s lag |
 | `now` source | Render-time `new Date()`, `useEffect`-only | `new Date()` only inside `useEffect`, never in render | Avoids hydration mismatch |
-| Schedule prop | Re-fetch on client, pass from server | Passed from server parent | Avoids second `getSchedule()` call on client |
-| Animation | JS-driven, CSS keyframe | Pure CSS keyframe | No client JS for the pulse |
+| Schedule prop | Full Schedule, minimal projection | **Minimal projection** | Reduces serialized payload + client bundle per handoff §6 |
+| Animation | JS-driven, CSS keyframe | Pure CSS keyframe (1.4s beacon) | No client JS for the pulse |
 | Microcopy | Editable post-merge, frozen at merge | Frozen at PR-merge time | Avoid back-and-forth |
+| Countdown rollover | Always minutes, hours+minutes ≥60min | **Hours+minutes ≥60min** | Per design handoff §7 — "342m" is technically correct but ugly; "5h 42m" reads better |
 
 ---
 
@@ -130,18 +149,22 @@ pnpm dev
 
 ## Done
 
-- [ ] All 5 render-state tests pass
-- [ ] Banner mounted at top of `app/page.tsx` (Schedule route only, per brief §7.6)
-- [ ] Schedule passed as server-to-client prop (no client re-fetch)
+- [ ] All 3 render-state tests pass (`live`, `upcoming`, `hidden`)
+- [ ] Banner mounted in `app/layout.tsx` at app root, visible on every route
+- [ ] Position is `fixed`, NOT sticky — confirmed by scrolling on `/sessions/<slug>`
+- [ ] `--banner-pad` CSS var on `<main>` flips correctly across states
+- [ ] Background is `#0F141E` for both active states; red dot for `live`, brand-yellow "UP NEXT" label for `upcoming`
+- [ ] Minimal serialized session list passed as prop (no full Schedule, no client re-fetch)
+- [ ] `?now=2026-06-13T11:00:00Z` dev override produces `live` state on a built-in fixture (manual check)
 - [ ] `pnpm lint` clean
-- [ ] Manual dev check confirms correct copy for current `Date`
 
 ---
 
 ## Refs
 
 - Approved plan: §M6
-- Design brief §7.6 (banner spec)
+- Design brief §7.6 (banner spec) — **superseded by** `system/design-handoff-2026-05-22.md` §4.2 and §5
+- **Design handoff §4.2** — authoritative banner visual spec
 
 ---
 
@@ -151,4 +174,4 @@ _(execution-time observations go here)_
 
 ---
 
-**Last Updated**: 2026-05-22
+**Last Updated**: 2026-05-22 (design handoff: app-root mount, 2 active states, fixed positioning, red live dot, `--banner-pad` CSS var)
