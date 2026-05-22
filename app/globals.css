@@ -1,24 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0a0a0a;
-  --color-surface: #161616;
-  --color-accent: #FFD300;
-  --color-in-person: #22c55e;
+  /* Brand */
+  --brand: #FBCB0A;
+  --brand-on-brand: #0F141E;
+  --brand-on-surface: #FBCB0A;
+  --brand-soft: rgba(251, 203, 10, 0.18);
 
-  --text-h1: 32px;
-  --text-h2: 24px;
-  --text-h3: 18px;
-  --text-body: 16px;
-  --text-meta: 14px;
-  --text-micro: 12px;
+  /* Surface */
+  --bg: #0B0F14;
+  --surface: #14181E;
+  --surface-2: #1B2027;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-2: rgba(255, 255, 255, 0.14);
 
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  /* Text */
+  --text: #F5F7FA;
+  --text-muted: #9CA6B3;
+  --text-faint: #5D6573;
+
+  /* Accent */
+  --live: #FF4D4D;
+  --star-on: #F5C518;
+  --star-off: rgba(255, 255, 255, 0.3);
+  --banner-bg: #0F141E;
+
+  /* Banner content padding (CSS var, updated by banner client island) */
+  --banner-pad: 50px;
+
+  /* Typography */
+  --font-sans: -apple-system, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --brand-on-surface: #9C7A00;
+    --bg: #F5F6F8;
+    --surface: #FFFFFF;
+    --surface-2: #FAFBFC;
+    --border: rgba(15, 20, 30, 0.07);
+    --border-2: rgba(15, 20, 30, 0.12);
+    --text: #0F141E;
+    --text-muted: #5A6473;
+    --text-faint: #8E97A6;
+    --star-on: #E9A800;
+    --star-off: rgba(15, 20, 30, 0.25);
+  }
 }
 
 html {
-  background: var(--color-bg);
-  color: #f5f5f5;
+  background: var(--bg);
+  color: var(--text);
   font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes live-beacon {
+  0% { inset: -3px; opacity: 0.4; }
+  100% { inset: -10px; opacity: 0; }
 }
