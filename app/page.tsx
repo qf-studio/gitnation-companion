@@ -113,6 +113,7 @@ export default function SchedulePage() {
           ) : null}
         </div>
         <div>Snapshot: {formatSnapshot(schedule.fetchedAt)}</div>
+        <div>© 2026 React Summit</div>
       </footer>
     </>
   );
